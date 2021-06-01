@@ -105,13 +105,13 @@ export default function WithSubnavigation() {
 const DesktopNav = () => {
   return (
     <Stack direction={"row"} spacing={4}>
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? "#"}
+                href={navItem.href}
                 fontSize={"sm"}
                 fontWeight={500}
                 color={useColorModeValue("gray.600", "gray.200")}
@@ -134,7 +134,7 @@ const DesktopNav = () => {
                 minW={"sm"}
               >
                 <Stack>
-                  {navItem.children.map((child) => (
+                  {navItem.children.map(child => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
                 </Stack>
@@ -191,7 +191,7 @@ const MobileNav = () => {
       p={4}
       display={{ md: "none" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
@@ -240,7 +240,7 @@ const MobileNavItem = ({ label, children, href }) => {
           align={"start"}
         >
           {children &&
-            children.map((child) => (
+            children.map(child => (
               <Link key={child.label} py={2} href={child.href}>
                 {child.label}
               </Link>
@@ -253,7 +253,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Inspiration",
+    label: "Home",
     children: [
       {
         label: "Explore Design Work",
@@ -266,9 +266,10 @@ const NAV_ITEMS = [
         href: "#",
       },
     ],
+    href: "/",
   },
   {
-    label: "Find Work",
+    label: "Features",
     children: [
       {
         label: "Job Board",
@@ -281,13 +282,18 @@ const NAV_ITEMS = [
         href: "#",
       },
     ],
+    href: "features",
   },
   {
-    label: "Learn Design",
-    href: "#",
+    label: "Testimonials",
+    href: "testimonials",
   },
   {
-    label: "Hire Designers",
-    href: "#",
+    label: "Blog",
+    href: "blog",
+  },
+  {
+    label: "Pricing",
+    href: "pricing",
   },
 ];
