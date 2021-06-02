@@ -1,13 +1,10 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Text } from "@chakra-ui/layout";
-import { useState } from "react";
 
 const contentApiKey = process.env.CONTENT_API_KEY;
 const blogUrl = process.env.BLOG_URL;
 
 export default function blog_post({ post }) {
-  const [breakpoint, setBreakpoint] = useState();
-  // console.log(window);
   return (
     <>
       <Box my={8}>
@@ -38,7 +35,6 @@ export default function blog_post({ post }) {
           p: {
             fontSize: "18px",
             marginTop: "15px",
-            // width: `${window.innerWidth <= 480 ? "100%" : "50%"}`,
             width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
