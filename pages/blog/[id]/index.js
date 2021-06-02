@@ -1,17 +1,20 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Text } from "@chakra-ui/layout";
+import { useState } from "react";
 
 const contentApiKey = process.env.CONTENT_API_KEY;
 const blogUrl = process.env.BLOG_URL;
 
 export default function blog_post({ post }) {
+  const [breakpoint, setBreakpoint] = useState();
+  // console.log(window);
   return (
     <>
       <Box my={8}>
-        <Heading as="h1" size="2xl" width="50%" mx="auto">
+        <Heading as="h1" size="2xl" width="90%" textAlign="center" mx="auto">
           {post.title}
         </Heading>
-        <Text width="50%" mx="auto" my={2}>
+        <Text width="90%" textAlign="center" mx="auto" my={2}>
           {post.custom_excerpt}
         </Text>
         <Image src={post.feature_image} alt={post.title} px="4rem" />
@@ -23,7 +26,8 @@ export default function blog_post({ post }) {
             fontSize: "28px",
             fontWeight: 700,
             marginTop: "56px",
-            width: "50%",
+            // width: "50%",
+            width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
           },
@@ -34,7 +38,8 @@ export default function blog_post({ post }) {
           p: {
             fontSize: "18px",
             marginTop: "15px",
-            width: "50%",
+            // width: `${window.innerWidth <= 480 ? "100%" : "50%"}`,
+            width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
           },
@@ -44,7 +49,7 @@ export default function blog_post({ post }) {
           figcaption: {
             fontSize: "12px",
             textAlign: "center",
-            width: "50%",
+            // width: "50%",
             paddingTop: "15px",
             marginLeft: "auto",
             marginRight: "auto",
@@ -58,7 +63,8 @@ export default function blog_post({ post }) {
           },
           ul: {
             marginTop: "14px",
-            width: "50%",
+            // width: "50%",
+            width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
             paddingLeft: "30px",
@@ -69,7 +75,9 @@ export default function blog_post({ post }) {
             color: "white",
             borderRadius: "6px",
             padding: "1rem",
-            width: "50%",
+            // width: "50%",
+            width: "90%",
+            overflow: "auto",
             marginLeft: "auto",
             marginRight: "auto",
           },

@@ -72,17 +72,18 @@ export default function WithSubnavigation() {
             fontSize={"sm"}
             fontWeight={400}
             variant={"link"}
-            href={"#"}
+            href={"https://dogefiles-web.vercel.app/signin"}
           >
             Sign In
           </Button>
           <Button
+            as={"a"}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
             bg={"primary.400"}
-            href={"#"}
+            href={"https://dogefiles-web.vercel.app/signup"}
             _hover={{
               bg: "primary.300",
             }}
