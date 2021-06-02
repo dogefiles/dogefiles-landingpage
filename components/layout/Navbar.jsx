@@ -282,18 +282,18 @@ const NAV_ITEMS = [
         href: "#",
       },
     ],
-    href: "features",
+    href: "/features",
   },
   {
     label: "Testimonials",
-    href: "testimonials",
+    href: "/testimonials",
   },
   {
     label: "Blog",
-    href: "blog",
+    href: "/blog",
   },
   {
     label: "Pricing",
-    href: "pricing",
+    href: "/pricing",
   },
 ];
