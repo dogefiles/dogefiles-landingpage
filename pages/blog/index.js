@@ -1,9 +1,6 @@
 import { Heading, Box, Image, Badge, Grid } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
-const contentApiKey = process.env.CONTENT_API_KEY;
-const blogUrl = process.env.BLOG_URL;
-
 function PostCard({ post }) {
   const router = useRouter();
   // console.log(post);
@@ -64,7 +61,12 @@ export default function blog({ posts }) {
 }
 
 export const getStaticProps = async context => {
-  const res = await fetch("https://test-ghost-99.herokuapp.com/ghost/api/v3/content/posts/?key=a21555e1e5e6b60ce4217ebbd6");
+  const contentApiKey = process.env.CONTENT_API_KEY;
+  const blogUrl = process.env.BLOG_URL;
+
+  const res = await fetch(
+    `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
+  );
 
   const posts = await res.json();
 
