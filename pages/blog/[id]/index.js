@@ -84,9 +84,8 @@ export default function blog_post({ post }) {
 }
 
 export const getStaticProps = async context => {
-  const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/${context.params.id}/?key=${contentApiKey}`
-  );
+  //`${blogUrl}/ghost/api/v3/content/posts/${context.params.id}/?key=${contentApiKey}`
+  const res = await fetch("https://test-ghost-99.herokuapp.com/ghost/api/v3/content/posts/?key=a21555e1e5e6b60ce4217ebbd6");
 
   const data = await res.json();
   const post = data.posts[0];
