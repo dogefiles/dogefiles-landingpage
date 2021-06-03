@@ -19,10 +19,8 @@ export default function download({ file }) {
 }
 
 export async function getServerSideProps(context) {
-  const { user, key } = context.params;
-  const res = await fetch(
-    `${process.env.SERVER_URL}/S3/objectInfo/${user}/${key}`
-  );
+  const { id } = context.params;
+  const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
 
   const data = await res.json();
   return {
