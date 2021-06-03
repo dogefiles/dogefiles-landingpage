@@ -98,19 +98,20 @@ export const getStaticProps = async context => {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
-  );
+  try {
+    const res = await fetch(
+      `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
+    );
 
-  const posts = await res.json();
+    const posts = await res.json();
 
-  if (!posts.posts) return;
+    const ids = posts.posts.map(post => post.id);
+    const paths = ids.map(id => ({ params: { id: id.toString() } }));
 
-  const ids = posts.posts.map(post => post.id);
-  const paths = ids.map(id => ({ params: { id: id.toString() } }));
-
-  return {
-    paths,
-    fallback: false,
-  };
+    return {
+      paths,
+    };
+  } catch (err) {
+    return { paths: [], fallback: false };
+  }
 };
