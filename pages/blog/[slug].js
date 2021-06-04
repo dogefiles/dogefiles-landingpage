@@ -84,7 +84,7 @@ export const getStaticProps = async context => {
   const contentApiKey = process.env.CONTENT_API_KEY;
   const blogUrl = process.env.BLOG_URL;
   const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/${context.params.id}/?key=${contentApiKey}`
+    `${blogUrl}/ghost/api/v3/content/posts/slug/${context.params.slug}/?key=${contentApiKey}`
   );
 
   const data = await res.json();
@@ -106,8 +106,8 @@ export const getStaticPaths = async () => {
 
     const posts = await res.json();
 
-    const ids = posts.posts.map(post => post.id);
-    const paths = ids.map(id => ({ params: { id: id.toString() } }));
+    const slugs = posts.posts.map(post => post.slug);
+    const paths = slugs.map(slug => ({ params: { slug: slug } }));
 
     return {
       paths,
