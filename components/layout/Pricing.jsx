@@ -16,6 +16,7 @@ import { FaCheckCircle } from "react-icons/fa";
 function PriceWrapper({ children }) {
   return (
     <Box
+      id="pricing"
       mb={4}
       shadow="base"
       borderWidth="1px"

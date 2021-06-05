@@ -11,7 +11,7 @@ function PostCard({ post }) {
       borderRadius="lg"
       overflow="hidden"
       _hover={{ boxShadow: "lg", cursor: "pointer" }}
-      onClick={() => router.push(`/blog/${post.slug}`)}
+      onClick={() => router.push(`/${post.slug}`)}
     >
       <Image src={post.feature_image} alt={post.title} />
 
