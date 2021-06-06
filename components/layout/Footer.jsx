@@ -15,7 +15,7 @@ import {
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiMailSend, BiCloud } from "react-icons/bi";
 
-const Logo = (props) => {
+const Logo = props => {
   return (
     <svg
       height={32}
@@ -85,7 +85,10 @@ export default function LargeWithNewsletter() {
             </Box>
             <Text fontSize={"sm"}>© 2021 Dogefiles. All rights reserved</Text>
             <Stack direction={"row"} spacing={6}>
-              <SocialButton label={"Twitter"} href={"#"}>
+              <SocialButton
+                label={"Twitter"}
+                href={"https://twitter.com/dogefiles"}
+              >
                 <FaTwitter />
               </SocialButton>
               <SocialButton label={"YouTube"} href={"#"}>
@@ -98,19 +101,18 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
-            <Link href={"#"}>About us</Link>
-            <Link href={"#"}>Blog</Link>
-            <Link href={"#"}>Contact us</Link>
-            <Link href={"#"}>Pricing</Link>
-            <Link href={"#"}>Testimonials</Link>
+            <Link href={"/about-us"}>About us</Link>
+            <Link href={"/blog"}>Blog</Link>
+            <Link href={"https://angel.co/company/dogefiles"}>Careers</Link>
+            <Link href={"/privacy-policy"}>Privacy Policy</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"#"}>Help Center</Link>
-            <Link href={"#"}>Terms of Service</Link>
-            <Link href={"#"}>Legal</Link>
-            <Link href={"#"}>Privacy Policy</Link>
-            <Link href={"#"}>Satus</Link>
+            <Link href={"/help-center"}>Help Center</Link>
+            <Link href={"/contact-us"}>Contact us</Link>
+            <Link href={"/terms-of-service"}>Terms of Service</Link>
+            {/* <Link href={"#"}>Legal</Link> */}
+            {/* <Link href={"#"}>Satus</Link> */}
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>

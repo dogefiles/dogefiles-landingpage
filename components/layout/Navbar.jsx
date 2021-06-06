@@ -283,11 +283,11 @@ const NAV_ITEMS = [
     //     href: "#",
     //   },
     // ],
-    href: "#features",
+    href: "/#features",
   },
   {
     label: "Testimonials",
-    href: "#testimonials",
+    href: "/#testimonials",
   },
   {
     label: "Blog",
@@ -295,6 +295,6 @@ const NAV_ITEMS = [
   },
   {
     label: "Pricing",
-    href: "#pricing",
+    href: "/#pricing",
   },
 ];
