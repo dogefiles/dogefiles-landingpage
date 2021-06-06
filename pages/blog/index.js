@@ -1,5 +1,6 @@
 import { Heading, Box, Image, Badge, Grid } from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import Page from "components/layout/Page";
 
 function PostCard({ post }) {
   const router = useRouter();
@@ -39,7 +40,13 @@ function PostCard({ post }) {
 
 export default function blog({ posts }) {
   return (
-    <>
+    <Page
+      description={
+        "Create a free Dogefiles account and get upto 20GB free. We are here to spread joy among every individual."
+      }
+      image={"/images/banner.jpg"}
+      title={"Dogefiles Blog: Secure Cloud Storage Solutions Blog"}
+    >
       <Heading
         as="h1"
         fontSize={["5xl", "6xl", "7xl"]}
@@ -56,7 +63,7 @@ export default function blog({ posts }) {
           <PostCard key={post.id} post={post} />
         ))}
       </Grid>
-    </>
+    </Page>
   );
 }
 

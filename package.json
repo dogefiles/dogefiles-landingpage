@@ -4,17 +4,25 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "node utils/gen-sitemap.js && next build",
+    "start": "next start",
+    "gen-sitemap": "node utils/gen-sitemap.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.3",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "date-fns": "^2.22.1",
     "framer-motion": "^4.1.17",
     "next": "10.2.3",
+    "next-seo": "^4.24.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "sitemap": "^7.0.0",
+    "title": "^3.4.3"
+  },
+  "devDependencies": {
+    "node-fetch": "^2.6.1"
   }
 }

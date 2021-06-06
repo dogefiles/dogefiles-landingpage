@@ -1,9 +1,14 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Text } from "@chakra-ui/layout";
+import Page from "components/layout/Page";
 
 export default function blog_post({ post }) {
   return (
-    <>
+    <Page
+      description={post.custom_excerpt}
+      image={post.feature_image}
+      title={post.title}
+    >
       <Box my={8}>
         <Heading as="h1" size="2xl" width="90%" textAlign="center" mx="auto">
           {post.title}
@@ -76,7 +81,7 @@ export default function blog_post({ post }) {
           },
         }}
       ></Box>
-    </>
+    </Page>
   );
 }
 
