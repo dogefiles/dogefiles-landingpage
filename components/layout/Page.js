@@ -19,7 +19,7 @@ const Page = ({
   const formattedTitle = titleStyle(title);
   const url = router && router.asPath ? router.asPath : undefined;
   const canonical = url && url === "/" ? domain : domain + url;
-  const featuredImage = domain + image;
+  const featuredImage = image.includes("https") ? image : domain + image;
 
   return (
     <>
