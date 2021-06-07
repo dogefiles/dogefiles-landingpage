@@ -5,7 +5,7 @@ import Page from "components/layout/Page";
 export default function blog_post({ post }) {
   return (
     <Page
-      description={post.custom_excerpt}
+      description={post.excerpt}
       image={post.feature_image}
       title={post.title}
     >
@@ -13,9 +13,11 @@ export default function blog_post({ post }) {
         <Heading as="h1" size="2xl" width="90%" textAlign="center" mx="auto">
           {post.title}
         </Heading>
-        <Text width="90%" textAlign="center" mx="auto" my={2}>
-          {post.custom_excerpt}
-        </Text>
+        {post.custom_excerpt && (
+          <Text width="90%" textAlign="center" mx="auto" my={2}>
+            {post.custom_excerpt}
+          </Text>
+        )}
         <Image src={post.feature_image} alt={post.title} px="4rem" />
       </Box>
       <Box

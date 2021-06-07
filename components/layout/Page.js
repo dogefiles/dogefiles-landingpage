@@ -87,11 +87,11 @@ const Page = ({
         <meta content={formattedTitle} property="og:title" />
         <meta content={description} property="og:description" />
         <meta content={canonical} property="og:url" />
-        {/* <meta content="5e41b2275db646a5" name="yandex-verification" /> */}
-        {/* <meta
-          content="t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc"
+        <meta content="d0595ef35ba21873" name="yandex-verification" />
+        <meta
+          content="V9vzMWZXdVw7eTF4OzDrEOYYoriYSehzdIkpQL43_Hw"
           name="google-site-verification"
-        /> */}
+        />
         {featuredImage && (
           <>
             <meta content={featuredImage} property="og:image" />
@@ -104,9 +104,14 @@ const Page = ({
             <meta content={dateTime(date)} property="article:published_time" />
           </>
         )}
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content="@dogefiles" name="twitter:site" />
-        <meta content="@dogefiles" name="twitter:creator" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@dogefiles" />
+        <meta property="twitter:creator" content="@dogefiles" />
+        <meta property="twitter:url" content={canonical} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={image} />
       </Head>
       {children}
       {date && (
