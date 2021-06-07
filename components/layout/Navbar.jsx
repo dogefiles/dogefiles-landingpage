@@ -23,8 +23,9 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position= {"fixed"} top= {"0"} left={"0"} width= {"100%"} zIndex= {"1"}>
       <Flex
+        className="mobilenav" 
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
@@ -34,6 +35,8 @@ export default function WithSubnavigation() {
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
         align={"center"}
+        // paddingLeft={isOpen ? "10px" : "53px"}
+        // paddingRight={isOpen ? "10px" : "48px"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
@@ -52,6 +55,7 @@ export default function WithSubnavigation() {
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
+            paddingLeft={useBreakpointValue({ base: "center", md: "53px" })}
           >
             Dogefiles
           </Text>
@@ -90,7 +94,7 @@ export default function WithSubnavigation() {
           >
             Sign Up
           </Button>
-          <Box marginLeft="auto">
+          <Box marginLeft="auto" paddingRight={useBreakpointValue({ base: "center", md: "40px" })}>
             <ThemeToggle />
           </Box>
         </Stack>
@@ -105,7 +109,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} paddingRight={"48px"}>
       {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -120,6 +124,7 @@ const DesktopNav = () => {
                   textDecoration: "none",
                   color: useColorModeValue("gray.800", "white"),
                 }}
+              
               >
                 {navItem.label}
               </Link>
@@ -133,8 +138,9 @@ const DesktopNav = () => {
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
+                
               >
-                <Stack>
+                <Stack >
                   {navItem.children.map(child => (
                     <DesktopSubNav key={child.label} {...child} />
                   ))}
@@ -177,8 +183,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
           justify={"flex-end"}
           align={"center"}
           flex={1}
+          
         >
-          <Icon color={"pink.400"} w={5} h={5} as={FiChevronRight} />
+          <Icon color={"pink.400"} w={5} h={5} as={FiChevronRight}  />
         </Flex>
       </Stack>
     </Link>
@@ -213,6 +220,7 @@ const MobileNavItem = ({ label, children, href }) => {
         _hover={{
           textDecoration: "none",
         }}
+        
       >
         <Text
           fontWeight={600}
