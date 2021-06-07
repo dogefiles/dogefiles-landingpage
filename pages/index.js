@@ -36,7 +36,7 @@ export default function Home() {
         description={
           "Create a free Dogefiles account and get upto 20GB free. We are here to spread joy among every individual."
         }
-        image={"/images/banner.jpg"}
+        image={"/images/banner.png"}
         title={"Secure cloud storage for everyone - Dogefiles"}
       >
         <Box mb={8} w="full">

@@ -1,6 +1,7 @@
-import { Heading, Box, Image, Badge, Grid } from "@chakra-ui/react";
+import { Heading, Box, Badge, Grid } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import Page from "components/layout/Page";
+import NextImage from "next/image";
 
 function PostCard({ post }) {
   const router = useRouter();
@@ -14,7 +15,13 @@ function PostCard({ post }) {
       _hover={{ boxShadow: "lg", cursor: "pointer" }}
       onClick={() => router.push(`/${post.slug}`)}
     >
-      <Image src={post.feature_image} alt={post.title} />
+      <NextImage
+        src={post.feature_image}
+        alt={post.title}
+        width="382px"
+        height="auto"
+      />
+      {/* <Image src={post.feature_image} alt={post.title} /> */}
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
@@ -44,7 +51,7 @@ export default function blog({ posts }) {
       description={
         "Create a free Dogefiles account and get upto 20GB free. We are here to spread joy among every individual."
       }
-      image={"/images/banner.jpg"}
+      image={"/images/banner.png"}
       title={"Dogefiles Blog: Secure Cloud Storage Solutions Blog"}
     >
       <Heading

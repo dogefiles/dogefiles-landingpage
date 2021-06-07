@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node utils/gen-sitemap.js && next build",
-    "start": "next start",
-    "gen-sitemap": "node utils/gen-sitemap.js"
+    "build": "node utils/download-posts-slug.js && next build",
+    "start": "node utils/download-posts-slug.js && next start",
+    "download-posts-slug": "node utils/download-posts-slug.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.3",
