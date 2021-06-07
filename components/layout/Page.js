@@ -2,8 +2,6 @@ import Head from "next/head";
 import { withRouter } from "next/router";
 import React from "react";
 import { ArticleJsonLd } from "next-seo";
-
-import { dateTime } from "utils/date-format";
 import titleStyle from "utils/title-style";
 
 const Page = ({
@@ -101,10 +99,23 @@ const Page = ({
         {date && (
           <>
             <meta content="article" property="og:type" />
-            <meta content={dateTime(date)} property="article:published_time" />
+            <meta content={date} property="article:published_time" />
           </>
         )}
 
+        {/* Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+
+        {/* LinkedIn */}
+        <meta property="og:title" content={title} />
+        <meta property="og:image" content={image} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
+
+        {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:site" content="@dogefiles" />
         <meta property="twitter:creator" content="@dogefiles" />
@@ -112,13 +123,22 @@ const Page = ({
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={image} />
+
+        {/* Pinterest */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:site_name" content={domain} />
+        <meta property="article:published_time" content={date} />
+        <meta property="article:author" content="Dogefiles" />
       </Head>
       {children}
       {date && (
         <ArticleJsonLd
           authorName="Dogefiles"
-          dateModified={dateTime(date)}
-          datePublished={dateTime(date)}
+          dateModified={date}
+          datePublished={date}
           description={description}
           images={[featuredImage]}
           publisherLogo="https://dogefiles.io/favicons/android-chrome-192x192.png"

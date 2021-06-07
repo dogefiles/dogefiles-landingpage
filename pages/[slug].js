@@ -8,6 +8,7 @@ export default function blog_post({ post }) {
       description={post.excerpt}
       image={post.feature_image}
       title={post.title}
+      date={post.updated_at}
     >
       <Box my={8}>
         <Heading as="h1" size="2xl" width="90%" textAlign="center" mx="auto">
