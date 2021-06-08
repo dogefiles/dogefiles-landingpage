@@ -13,6 +13,7 @@ import {
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
+  Image,
   useDisclosure,
 } from "@chakra-ui/react";
 
@@ -62,8 +63,14 @@ export default function WithSubnavigation() {
             justify={{ base: "center", md: "start" }}
             alignItems="center"
           >
-            <Box display={["block", "block", "block", "none"]}>
-              <NextImage
+            <Box display={["block", "block", "none", "none"]}>
+              {/* <NextImage
+                src="/images/logo.png"
+                width="50px"
+                height="50px"
+                onClick={() => router.push("/")}
+              /> */}
+              <Image
                 src="/images/logo.png"
                 width="50px"
                 height="50px"
@@ -135,7 +142,13 @@ const DesktopNav = () => {
       paddingRight={"48px"}
       alignItems="center"
     >
-      <NextImage
+      {/* <NextImage
+        src="/images/logo.png"
+        width="50px"
+        height="50px"
+        onClick={() => router.push("/")}
+      /> */}
+      <Image
         src="/images/logo.png"
         width="50px"
         height="50px"
