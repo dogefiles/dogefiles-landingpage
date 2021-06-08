@@ -14,6 +14,9 @@ const customTheme = extendTheme({
         fontSize: "28px",
       },
       h3: {
+        fontSize: "22px",
+      },
+      h4: {
         fontSize: "20px",
       },
       p: {
