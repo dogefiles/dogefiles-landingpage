@@ -25,10 +25,15 @@ export default function blog_post({ post }) {
         dangerouslySetInnerHTML={{ __html: post.html }}
         css={{
           h2: {
-            fontSize: "28px",
             fontWeight: 700,
             marginTop: "56px",
-            // width: "50%",
+            width: "90%",
+            marginLeft: "auto",
+            marginRight: "auto",
+          },
+          h3: {
+            fontWeight: 700,
+            marginTop: "20px",
             width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
@@ -38,7 +43,6 @@ export default function blog_post({ post }) {
             color: "#FF1A75",
           },
           p: {
-            fontSize: "18px",
             marginTop: "15px",
             width: "90%",
             marginLeft: "auto",
@@ -48,9 +52,7 @@ export default function blog_post({ post }) {
             marginTop: "22px",
           },
           figcaption: {
-            fontSize: "12px",
             textAlign: "center",
-            // width: "50%",
             paddingTop: "15px",
             marginLeft: "auto",
             marginRight: "auto",
@@ -64,7 +66,14 @@ export default function blog_post({ post }) {
           },
           ul: {
             marginTop: "14px",
-            // width: "50%",
+            width: "90%",
+            marginLeft: "auto",
+            marginRight: "auto",
+            paddingLeft: "30px",
+            paddingRight: "30px",
+          },
+          ol: {
+            marginTop: "14px",
             width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
