@@ -18,94 +18,129 @@ import {
 
 import { FiMenu, FiX, FiChevronDown, FiChevronRight } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
+import NextImage from "next/image";
+import { useRouter } from "next/router";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const router = useRouter();
   return (
-    <Box>
-      <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
-        minH={"60px"}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
-        align={"center"}
+    <Flex justifyContent="center">
+      <Box
+        position={"fixed"}
+        top={"0"}
+        width="100%"
+        // maxWidth="1536px" its old max width dont remove this line
+        maxWidth="1400px"
+        zIndex={"1"}
       >
         <Flex
-          flex={{ base: 1, md: "auto" }}
-          ml={{ base: -2 }}
-          display={{ base: "flex", md: "none" }}
+          bg={useColorModeValue("white", "gray.800")}
+          color={useColorModeValue("gray.600", "white")}
+          minH={"60px"}
+          py={{ base: 2 }}
+          borderBottom={1}
+          borderStyle={"solid"}
+          borderColor={useColorModeValue("gray.200", "gray.900")}
+          align={"center"}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <FiX w={3} h={3} /> : <FiMenu w={5} h={5} />}
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
+          <Flex
+            flex={{ base: 1, md: "auto" }}
+            ml={{ base: -2 }}
+            display={{ base: "flex", md: "none" }}
           >
-            Dogefiles
-          </Text>
-
-          <Flex display={{ base: "none", md: "flex" }} ml={10}>
-            <DesktopNav />
+            <IconButton
+              onClick={onToggle}
+              icon={isOpen ? <FiX w={3} h={3} /> : <FiMenu w={5} h={5} />}
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+              mx={4}
+            />
           </Flex>
+          <Flex
+            flex={{ base: 1 }}
+            justify={{ base: "center", md: "start" }}
+            alignItems="center"
+          >
+            <Box display={["block", "block", "block", "none"]}>
+              <NextImage
+                src="/images/logo.png"
+                width="50px"
+                height="50px"
+                onClick={() => router.push("/")}
+              />
+            </Box>
+            <Flex display={{ base: "none", md: "flex" }} ml={10}>
+              <DesktopNav />
+            </Flex>
+          </Flex>
+
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={"flex-end"}
+            direction={"row"}
+            spacing={6}
+            alignItems="center"
+          >
+            {/* If you want the to be in side of Sign In Button */}
+            {/* <NextImage
+              src="/images/logo.png"
+              width="50px"
+              height="50px"
+              onClick={() => router.push("/")}
+            /> */}
+            <Button
+              as={"a"}
+              fontSize={"sm"}
+              fontWeight={400}
+              variant={"link"}
+              href={"https://dogefiles-web.vercel.app/signin"}
+            >
+              Sign In
+            </Button>
+            <Button
+              as={"a"}
+              display={{ base: "none", md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"primary.400"}
+              href={"https://dogefiles-web.vercel.app/signup"}
+              _hover={{
+                bg: "primary.300",
+              }}
+            >
+              Sign Up
+            </Button>
+            <Box pr={[2, 2, 2, 6]}>
+              <ThemeToggle />
+            </Box>
+          </Stack>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={"flex-end"}
-          direction={"row"}
-          spacing={6}
-        >
-          <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"https://dogefiles-web.vercel.app/signin"}
-          >
-            Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"primary.400"}
-            href={"https://dogefiles-web.vercel.app/signup"}
-            _hover={{
-              bg: "primary.300",
-            }}
-          >
-            Sign Up
-          </Button>
-          <Box marginLeft="auto">
-            <ThemeToggle />
-          </Box>
-        </Stack>
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </Box>
+    </Flex>
   );
 }
 
 const DesktopNav = () => {
+  const router = useRouter();
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack
+      direction={"row"}
+      spacing={4}
+      paddingRight={"48px"}
+      alignItems="center"
+    >
+      <NextImage
+        src="/images/logo.png"
+        width="50px"
+        height="50px"
+        onClick={() => router.push("/")}
+      />
       {NAV_ITEMS.map(navItem => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -192,6 +227,8 @@ const MobileNav = () => {
       p={4}
       display={{ md: "none" }}
     >
+      {/* <NextImage src="/images/logo.png" width="50px" height="50px" /> */}
+      {/* If you want it to be inside hamburger menu */}
       {NAV_ITEMS.map(navItem => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
@@ -253,22 +290,22 @@ const MobileNavItem = ({ label, children, href }) => {
 };
 
 const NAV_ITEMS = [
-  {
-    label: "Home",
-    // children: [
-    //   {
-    //     label: "Explore Design Work",
-    //     subLabel: "Trending Design to inspire you",
-    //     href: "#",
-    //   },
-    //   {
-    //     label: "New & Noteworthy",
-    //     subLabel: "Up-and-coming Designers",
-    //     href: "#",
-    //   },
-    // ],
-    href: "/",
-  },
+  // {
+  //   label: "Home",
+  //   // children: [
+  //   //   {
+  //   //     label: "Explore Design Work",
+  //   //     subLabel: "Trending Design to inspire you",
+  //   //     href: "#",
+  //   //   },
+  //   //   {
+  //   //     label: "New & Noteworthy",
+  //   //     subLabel: "Up-and-coming Designers",
+  //   //     href: "#",
+  //   //   },
+  //   // ],
+  //   href: "/",
+  // },
   {
     label: "Features",
     // children: [
