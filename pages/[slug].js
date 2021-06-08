@@ -24,11 +24,9 @@ export default function blog_post({ post }) {
       <Box
         dangerouslySetInnerHTML={{ __html: post.html }}
         css={{
-          h2: {
-            fontSize: "28px",
+          "h2, h3, h4": {
             fontWeight: 700,
             marginTop: "56px",
-            // width: "50%",
             width: "90%",
             marginLeft: "auto",
             marginRight: "auto",
@@ -38,7 +36,6 @@ export default function blog_post({ post }) {
             color: "#FF1A75",
           },
           p: {
-            fontSize: "18px",
             marginTop: "15px",
             width: "90%",
             marginLeft: "auto",
@@ -48,9 +45,7 @@ export default function blog_post({ post }) {
             marginTop: "22px",
           },
           figcaption: {
-            fontSize: "12px",
             textAlign: "center",
-            // width: "50%",
             paddingTop: "15px",
             marginLeft: "auto",
             marginRight: "auto",
@@ -62,9 +57,8 @@ export default function blog_post({ post }) {
             paddingLeft: "4rem",
             paddingRight: "4rem",
           },
-          ul: {
+          "ul, ol": {
             marginTop: "14px",
-            // width: "50%",
             width: "90%",
             marginLeft: "auto",
             marginRight: "auto",

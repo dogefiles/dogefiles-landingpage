@@ -7,6 +7,27 @@ const customTheme = extendTheme({
     body: "Inter",
   },
 
+  styles: {
+    global: {
+      "html, body": {},
+      h2: {
+        fontSize: "28px",
+      },
+      h3: {
+        fontSize: "22px",
+      },
+      h4: {
+        fontSize: "20px",
+      },
+      p: {
+        fontSize: "18px",
+      },
+      figcaption: {
+        fontSize: "12px",
+      },
+    },
+  },
+
   colors: {
     ...theme.colors,
     /** Example */
