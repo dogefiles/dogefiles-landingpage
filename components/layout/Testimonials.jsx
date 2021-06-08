@@ -66,7 +66,7 @@ function TestmonialCard(props) {
       id="testimonials"
       boxShadow={"lg"}
       maxW={"640px"}
-      direction={{ base: "column-reverse", md: "row" }}
+      direction={{ base: "Boxcolumn-reverse", md: "row" }}
       width={"full"}
       rounded={"xl"}
       p={10}
