@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/layout";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Faq from "./FAQ";
 
 const Layout = ({ children }) => {
   return (
@@ -14,7 +15,9 @@ const Layout = ({ children }) => {
         >
           {children}
         </Box>
+        <Faq/>
         <Footer />
+       
       </Box>
     </Box>
   );
