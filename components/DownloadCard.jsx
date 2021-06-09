@@ -164,7 +164,7 @@ export default function SocialProfileSimple({ file }) {
                 alignItems="center"
               >
                 <Icon as={BsCalendar} boxSize={5} color="green" />
-                <Text>{new Date(file.updatedAt).toDateString()}</Text>
+                <Text>{new Date(file.createdAt).toDateString()}</Text>
               </HStack>
               <HStack
                 justifyContent="space-between"
@@ -183,7 +183,7 @@ export default function SocialProfileSimple({ file }) {
               >
                 <Icon as={BsDownload} boxSize={5} color="green" />
                 <Text>
-                  {file.downloads && files.downloads.length > 0
+                  {file.downloads && file.downloads.length > 0
                     ? file.downloads.length
                     : 0}
                 </Text>
