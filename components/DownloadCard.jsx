@@ -182,7 +182,7 @@ export default function SocialProfileSimple({ file }) {
                 alignItems="center"
               >
                 <Icon as={BsDownload} boxSize={5} color="green" />
-                <Text>{file.downloads}</Text>
+                <Text>{file.downloads.length}</Text>
               </HStack>
             </Stack>
           </Box>
