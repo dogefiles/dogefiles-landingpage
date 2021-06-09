@@ -1,5 +1,6 @@
 import {
     Box,
+    Heading,
     Accordion,
     AccordionItem,
     AccordionButton,
@@ -11,18 +12,18 @@ const Faq =()=>{
     return(
         <Box>
        <Box textAlign="center" fontSize="60px">
-       <h1>FAQ</h1>
+       <Heading as="h2" size="3xl" isTruncated>FAQ</Heading>
        </Box>
         <Accordion allowToggle paddingTop="70px" paddingLeft="10%" paddingBottom="120px" width="90%">
   <AccordionItem >
-    <h1>
+    <Heading as="h5" size="sm">
       <AccordionButton>
         <Box flex="1" textAlign="left">
         What does LOREM mean?
         </Box>
         <AccordionIcon />
       </AccordionButton>
-    </h1>
+    </Heading>
     <AccordionPanel pb={4}>
     ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is 
     dummy text that is not meant to mean anything. It is used as a placeholder in
@@ -33,14 +34,14 @@ const Faq =()=>{
   </AccordionItem>
 
   <AccordionItem>
-    <h1>
+    <Heading as="h5" size="sm">
       <AccordionButton>
         <Box flex="1" textAlign="left">
         Where can I subscribe to your newsletter?
         </Box>
         <AccordionIcon />
       </AccordionButton>
-    </h1>
+    </Heading>
     <AccordionPanel pb={4}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -49,14 +50,14 @@ const Faq =()=>{
     </AccordionPanel>
   </AccordionItem>
   <AccordionItem>
-    <h1>
+    <Heading as="h5" size="sm">
       <AccordionButton>
         <Box flex="1" textAlign="left">
         Do you accept orders via Phone or E-mail?
         </Box>
         <AccordionIcon />
       </AccordionButton>
-    </h1>
+    </Heading>
     <AccordionPanel pb={4}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -65,14 +66,14 @@ const Faq =()=>{
     </AccordionPanel>
   </AccordionItem>
   <AccordionItem>
-    <h1>
+    <Heading as="h5" size="sm">
       <AccordionButton>
         <Box flex="1" textAlign="left">
         What are your opening hours?
         </Box>
         <AccordionIcon />
       </AccordionButton>
-    </h1>
+    </Heading>
     <AccordionPanel pb={4}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -81,14 +82,14 @@ const Faq =()=>{
     </AccordionPanel>
   </AccordionItem>
   <AccordionItem>
-    <h1>
+    <Heading as="h5" size="sm">
       <AccordionButton>
         <Box flex="1" textAlign="left">
         General Terms & Conditions (GTC)
         </Box>
         <AccordionIcon />
       </AccordionButton>
-    </h1>
+    </Heading>
     <AccordionPanel pb={4}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

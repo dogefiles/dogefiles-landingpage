@@ -4,6 +4,7 @@ import Features from "components/layout/Features";
 import Pricing from "components/layout/Pricing";
 import Testimonials from "components/layout/Testimonials";
 import Page from "components/layout/Page";
+import Faq from "components/layout/FAQ";
 
 export default function Home() {
   //  <Head>
@@ -44,6 +45,7 @@ export default function Home() {
           <Features />
           <Testimonials />
           <Pricing />
+          <Faq/>
         </Box>
       </Page>
     </>
