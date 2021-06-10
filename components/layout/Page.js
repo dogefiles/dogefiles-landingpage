@@ -7,10 +7,10 @@ import titleStyle from "utils/title-style";
 const Page = ({
   children,
   date,
-  description,
+  description = "Upload and Download files for free upto 50 GB for free user, You can keep your files as long as you want, Safest and fastest way to upload.",
   image,
   title = "Secure cloud storage for everyone - Dogefiles",
-  keywords,
+  keywords = "best cloud storage, free cloud storage, dogefiles, 50gb cloud storage",
   router,
 }) => {
   const domain = "https://dogefiles.io";
@@ -26,8 +26,8 @@ const Page = ({
         <meta charSet="utf-8" />
         <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        {description && <meta content={description} name="description" />}
-        {keywords && <meta content={keywords} name="keywords" />}
+        <meta content={description} name="description" />
+        <meta content={keywords} name="keywords" />
         <meta content="follow, index" name="robots" />
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
@@ -59,27 +59,7 @@ const Page = ({
           rel="mask-icon"
         />
         <link href="/favicons/favicon.ico" rel="shortcut icon" />
-        {/* <link
-          crossOrigin=""
-          href="https://fonts.gstatic.com/"
-          rel="preconnect"
-        />
-        <link
-          crossOrigin=""
-          href="https://cdn.usefathom.com"
-          rel="preconnect"
-        />
-        <link
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
-          rel="preload"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap"
-          media="print"
-          onLoad="this.media='all'"
-          rel="stylesheet"
-        /> */}
+
         {url && <link href={canonical} rel="canonical" />}
         <meta content="en_US" property="og:locale" />
         <meta content={formattedTitle} property="og:title" />

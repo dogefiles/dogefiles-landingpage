@@ -49,9 +49,9 @@ export default function blog({ posts }) {
   return (
     <Page
       description={
-        "Create a free Dogefiles account and get upto 20GB free. We are here to spread joy among every individual."
+        "Read the latest news about dogefiles, free file uploading online, smart online storage to backup your photos, files, documents and more."
       }
-      image={"/images/banner.png"}
+      image={"/images/Dogefiles.png"}
       title={"Dogefiles Blog: Secure Cloud Storage Solutions Blog"}
     >
       <Heading
