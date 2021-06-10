@@ -11,6 +11,7 @@ import {
   IconButton,
   createIcon,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 
 export default function CallToActionWithVideo() {
@@ -57,17 +58,19 @@ export default function CallToActionWithVideo() {
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <Button
-              rounded={"full"}
-              size={"lg"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"red"}
-              bg={"primary.400"}
-              _hover={{ bg: "primary.500" }}
-            >
-              Get started
-            </Button>
+            <Link href="https://dogefiles-web.vercel.app">
+              <Button
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
+                px={6}
+                colorScheme={"red"}
+                bg={"primary.400"}
+                _hover={{ bg: "primary.500" }}
+              >
+                Get started
+              </Button>
+            </Link>
             <Button
               rounded={"full"}
               size={"lg"}
