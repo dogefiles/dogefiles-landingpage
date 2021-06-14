@@ -15,12 +15,12 @@ function PostCard({ post }) {
       _hover={{ boxShadow: "lg", cursor: "pointer" }}
       onClick={() => router.push(`/${post.slug}`)}
     >
-      <NextImage
+      {/* <NextImage
         src={post.feature_image}
         alt={post.title}
         width="382px"
         height="auto"
-      />
+      /> */}
       {/* <Image src={post.feature_image} alt={post.title} /> */}
 
       <Box p="6">
