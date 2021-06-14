@@ -20,5 +20,5 @@ module.exports = {
       "static.ghost.org",
     ],
   },
-  target: "server",
+  target: "serverless",
 };
