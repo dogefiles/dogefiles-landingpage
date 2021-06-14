@@ -8,7 +8,9 @@ export default function download({ file }) {
       <Page
         description={"Download the uploaded files at Dogefiles"}
         image={"/images/Dogefiles.png"}
-        title={`${file.fileName} - Dogefiles`}
+        title={`${
+          file.fileName ? file.fileName : "File does not exists"
+        } - Dogefiles`}
       >
         <Flex py={[1, 2, 2, 6]}>
           <Image src="https://i.postimg.cc/3W0dVjMc/side-ad.png" flex="1" />
