@@ -6,7 +6,7 @@ export default function blog_post({ post }) {
   return (
     <Page
       description={post.excerpt}
-      image={post.feature_image}
+      // image={post.feature_image}
       title={post.title}
       date={post.updated_at}
     >
@@ -19,7 +19,7 @@ export default function blog_post({ post }) {
             {post.custom_excerpt}
           </Text>
         )}
-        <Image src={post.feature_image} alt={post.title} px="4rem" />
+        {/* <Image src={post.feature_image} alt={post.title} px="4rem" /> */}
       </Box>
       <Box
         dangerouslySetInnerHTML={{ __html: post.html }}
