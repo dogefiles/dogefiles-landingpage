@@ -1,5 +1,6 @@
 app:
   - redirects:
-      - from: /*
-        to: /index.html
-        assets: true
+      - from: /_next/*
+        cdn: true
+      - ext: js,css,ico,png,jpg,svg
+        cdn: true

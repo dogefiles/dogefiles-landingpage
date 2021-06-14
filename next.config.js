@@ -21,5 +21,4 @@ module.exports = {
     ],
   },
   target: "server",
-  assetPrefix: process.env.PUBLIC_URL || "/",
 };
