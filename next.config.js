@@ -20,4 +20,6 @@ module.exports = {
       "static.ghost.org",
     ],
   },
+  target: "server",
+  assetPrefix: process.env.PUBLIC_URL || "/",
 };
