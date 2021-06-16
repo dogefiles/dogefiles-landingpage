@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 import Page from "components/layout/Page";
 
 export default function contact_us() {
@@ -10,7 +10,18 @@ export default function contact_us() {
       image={"/images/Dogefiles.png"}
       title={"Contact Us - Dogefiles"}
     >
-      <Text>Contact Us Page</Text>
+      <Box mt="8">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfbytWw4v6Dr-57Yepmjv0iVN8aoq0RzYOPdetgmELVTIJBfQ/viewform?embedded=true"
+          width={["100%", "80%"]}
+          height="1080px"
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+        >
+          Loading…
+        </iframe>
+      </Box>
     </Page>
   );
 }
