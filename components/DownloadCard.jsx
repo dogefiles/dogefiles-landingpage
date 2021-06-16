@@ -12,12 +12,14 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { BsDownload, BsCalendar, BsInfoSquare } from "react-icons/bs";
+import nameFormatter from "utils/nameFormatter";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
   const [downloadPermission, setDownloadPermission] = useState(false);
   const [timerValue, setTimerValue] = useState(5);
   const [downloadLink, setDownloadLink] = useState(null);
+  const fileName = file.fileName && nameFormatter(file.fileName);
 
   let timerDuration = 5;
   useEffect(() => {
@@ -61,7 +63,7 @@ export default function SocialProfileSimple({ file }) {
               boxSize="20"
             />
             <Heading fontSize={"xl"} fontFamily={"body"} isTruncated my={2}>
-              {file.fileName}
+              {fileName}
             </Heading>
             <Text>
               This is a {file.fileType} file lorem ipsum Lorem ipsum dolor sit

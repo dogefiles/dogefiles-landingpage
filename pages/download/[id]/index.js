@@ -1,16 +1,18 @@
 import { Image, Flex, Heading } from "@chakra-ui/react";
 import DownloadCard from "components/DownloadCard";
 import Page from "components/layout/Page";
+import nameFormatter from "utils/nameFormatter";
 
 export default function download({ file }) {
-  console.log(file);
+  const fileName = file.fileName && nameFormatter(file.fileName);
+
   return (
     <>
       <Page
         description={"Download the uploaded files at Dogefiles"}
         image={"/images/Dogefiles.png"}
         title={`${
-          file.fileName ? file.fileName : "File does not exists"
+          file.fileName ? fileName : "File does not exists"
         } - Dogefiles`}
       >
         <Flex py={[1, 2, 2, 6]}>
@@ -30,14 +32,9 @@ export default function download({ file }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  // const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
-  const res = await fetch(
-    `https://dogefiles-server.herokuapp.com/S3/objectInfo/${id}`
-  );
-  console.log("THE RES ====>", res);
+  const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
 
   const data = await res.json();
-  console.log("THE DATA ====>", data);
   return {
     props: {
       file: data,
