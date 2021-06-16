@@ -71,9 +71,7 @@ export default function WithSubnavigation() {
                 onClick={() => router.push("/")}
               /> */}
               <Image
-                src="/images/logo.png"
-                width="50px"
-                height="50px"
+                src="/images/dogefiles_logo.png"
                 onClick={() => router.push("/")}
               />
             </Box>
@@ -112,7 +110,7 @@ export default function WithSubnavigation() {
               fontWeight={600}
               color={"white"}
               bg={"primary.400"}
-              href={"https://dogefiles-web.vercel.app/signup"}
+              href={"https://app.dogefiles.io/signup"}
               _hover={{
                 bg: "primary.300",
               }}
@@ -149,9 +147,8 @@ const DesktopNav = () => {
         onClick={() => router.push("/")}
       /> */}
       <Image
-        src="/images/logo.png"
-        width="50px"
-        height="50px"
+        src="/images/dogefiles_logo.png"
+        width="11rem"
         onClick={() => router.push("/")}
       />
       {NAV_ITEMS.map(navItem => (
@@ -344,7 +341,7 @@ const NAV_ITEMS = [
     href: "/blog",
   },
   {
-    label: "Pricing",
-    href: "/#pricing",
+    label: "FAQ",
+    href: "/#faq",
   },
 ];

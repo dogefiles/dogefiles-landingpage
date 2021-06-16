@@ -11,8 +11,8 @@ import {
   IconButton,
   createIcon,
   useColorModeValue,
-  Link,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export default function CallToActionWithVideo() {
   return (
@@ -58,7 +58,7 @@ export default function CallToActionWithVideo() {
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: "column", sm: "row" }}
           >
-            <Link href="https://dogefiles-web.vercel.app">
+            <NextLink href="https://app.dogefiles.io/signin">
               <Button
                 rounded={"full"}
                 size={"lg"}
@@ -70,7 +70,7 @@ export default function CallToActionWithVideo() {
               >
                 Get started
               </Button>
-            </Link>
+            </NextLink>
             <Button
               rounded={"full"}
               size={"lg"}

@@ -17,7 +17,7 @@ export default function Home() {
           <Hero />
           <Features />
           <Testimonials />
-          <Pricing />
+          {/* <Pricing />  We don't need it yet*/}
           <Faq />
         </Box>
       </Page>
