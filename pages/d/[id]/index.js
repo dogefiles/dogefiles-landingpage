@@ -29,7 +29,10 @@ export default function download({ file }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
+  // const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
+  const res = await fetch(
+    `https://dogefiles-server.herokuapp.com/S3/objectInfo/${id}`
+  );
 
   const data = await res.json();
   return {
