@@ -3,6 +3,7 @@ import DownloadCard from "components/DownloadCard";
 import Page from "components/layout/Page";
 
 export default function download({ file }) {
+  console.log(file);
   return (
     <>
       <Page
@@ -33,8 +34,10 @@ export async function getServerSideProps(context) {
   const res = await fetch(
     `https://dogefiles-server.herokuapp.com/S3/objectInfo/${id}`
   );
+  console.log("THE RES ====>", res);
 
   const data = await res.json();
+  console.log("THE DATA ====>", data);
   return {
     props: {
       file: data,
