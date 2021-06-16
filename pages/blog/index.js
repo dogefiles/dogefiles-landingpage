@@ -1,49 +1,49 @@
 import { Heading, Box, Badge, Grid, Image } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import Page from "components/layout/Page";
+import NextLink from "next/link";
 // import NextImage from "next/image";
 
 function PostCard({ post }) {
-  const router = useRouter();
-  // console.log(post);
   return (
-    <Box
-      maxW="sm"
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      _hover={{ boxShadow: "lg", cursor: "pointer" }}
-      onClick={() => router.push(`/${post.slug}`)}
-    >
-      {/* <NextImage
+    <NextLink href={`/${post.slug}`}>
+      <Box
+        maxW="sm"
+        borderWidth="1px"
+        borderRadius="lg"
+        overflow="hidden"
+        _hover={{ boxShadow: "lg", cursor: "pointer" }}
+        // onClick={() => router.push(`/${post.slug}`)}
+      >
+        {/* <NextImage
         src={post.feature_image}
         alt={post.title}
         width="382px"
         height="auto"
       /> */}
-      {post?.feature_image && (
-        <Image src={post.feature_image} alt={post.title} />
-      )}
+        {post?.feature_image && (
+          <Image src={post.feature_image} alt={post.title} />
+        )}
 
-      <Box p="6">
-        <Box d="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            {post.slug}
-          </Badge>
-        </Box>
+        <Box p="6">
+          <Box d="flex" alignItems="baseline">
+            <Badge borderRadius="full" px="2" colorScheme="teal">
+              {post.slug}
+            </Badge>
+          </Box>
 
-        <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
-          {post.title}
-        </Box>
+          <Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
+            {post.title}
+          </Box>
 
-        <Box as="span" color="gray.600" fontSize="sm">
-          {new Date(post.updated_at).toDateString()}{" "}
-          <Box as="span" color="gray.600" fontSize="xs">
-            • {post.reading_time} min read
+          <Box as="span" color="gray.600" fontSize="sm">
+            {new Date(post.updated_at).toDateString()}{" "}
+            <Box as="span" color="gray.600" fontSize="xs">
+              • {post.reading_time} min read
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+    </NextLink>
   );
 }
 
@@ -84,7 +84,12 @@ export const getStaticProps = async context => {
     `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
   );
 
-  const posts = await res.json();
+  let posts = await res.json();
+
+  if (posts.errors) {
+    console.log("There was an error");
+    posts = { posts: [], meta: {}, error: true };
+  }
 
   return {
     props: {
