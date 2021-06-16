@@ -21,5 +21,4 @@ module.exports = {
     ],
   },
   target: "serverless",
-  assetPrefix: process.env.PUBLIC_URL || "/",
 };
