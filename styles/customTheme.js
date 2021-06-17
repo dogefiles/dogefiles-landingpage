@@ -9,7 +9,9 @@ const customTheme = extendTheme({
 
   styles: {
     global: {
-      "html, body": {},
+      "html, body": {
+        fontFamily: "Inter, sans-serif",
+      },
       h2: {
         fontSize: "28px",
       },

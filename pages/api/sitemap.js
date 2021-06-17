@@ -3,12 +3,13 @@ const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
 
 export default async (req, res) => {
+  const HOST_URL = process.env.HOST_URL;
   try {
     // An array with your links
     const links = [];
     posts_slug.map(slug => {
       links.push({
-        url: `/${slug}`,
+        url: `${HOST_URL}/${slug}`,
         changefreq: "weekly",
         priority: 0.9,
       });
@@ -16,17 +17,17 @@ export default async (req, res) => {
 
     // Add other pages
     const pages = [
-      "/careers",
-      "/contact-us",
-      "/about-us",
-      "/blog",
-      "/privacy-policy",
-      "/terms-of-service",
-      "/help-center",
+      "careers",
+      "contact-us",
+      "about-us",
+      "blog",
+      "privacy-policy",
+      "terms-of-service",
+      "help-center",
     ];
     pages.map(url => {
       links.push({
-        url,
+        url: `${HOST_URL}/${url}`,
         changefreq: "weekly",
         priority: 0.9,
       });
@@ -34,7 +35,7 @@ export default async (req, res) => {
 
     // Create a stream to write to
     const stream = new SitemapStream({
-      hostname: `https://${req.headers.host}`,
+      hostname: `https://${HOST_URL}`,
     });
 
     res.writeHead(200, {
