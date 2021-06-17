@@ -6,26 +6,42 @@ import {
   Stack,
   Flex,
   Heading,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
+import {
+  FcAssistant,
+  FcDonate,
+  FcInTransit,
+  FcDownload,
+  FcUpload,
+} from "react-icons/fc";
+import { FiCloud, FiDownloadCloud, FiCloudLightning } from "react-icons/fi";
 
 const Feature = ({ title, text, icon }) => {
   return (
     <Stack>
       <Flex
-        w={16}
+        // w={16}
         h={16}
         align={"center"}
         justify={"center"}
-        color={"white"}
+        // color={"white"}
         rounded={"full"}
-        bg={"gray.100"}
+        // bg={"gray.100"}
+        // bg={useColorModeValue("gray.200", "gray.600")}
         mb={1}
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text fontWeight={600} textAlign="center">
+        {title}
+      </Text>
+      <Text
+        textAlign="center"
+        color={useColorModeValue("gray.600", "gray.400")}
+      >
+        {text}
+      </Text>
     </Stack>
   );
 };
@@ -38,24 +54,22 @@ export default function SimpleThreeColumns() {
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={"Lifetime Support"}
+          icon={<Icon as={FiCloud} w={10} h={10} />}
+          title={"Unlimited Uploads"}
+          text={"Signup today and enjoy free cloud storage upto 20 GB ✌"}
+        />
+        <Feature
+          icon={<Icon as={FiDownloadCloud} w={10} h={10} />}
+          title={"Unlimited Downloads"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "Easily download and share your images and videos among your friends and family 🙋"
           }
         />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={"Unlimited Donations"}
+          icon={<Icon as={FiCloudLightning} w={10} h={10} />}
+          title={"Lightning Speed"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
-        />
-        <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={"Instant Delivery"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "Enjoy lightning fast speed on uploads and downloads from our servers across the 🌎"
           }
         />
       </SimpleGrid>

@@ -37,7 +37,7 @@ export default function SocialProfileSimple({ file }) {
 
   const getDownloadLink = async () => {
     const res = await fetch(
-      `https://dogefiles-server.herokuapp.com/S3/downloadObject/?id=${file._id}`
+      `https://api.dogefiles.io/S3/downloadObject/?id=${file._id}`
     );
     console.log(res);
     const data = await res.json();

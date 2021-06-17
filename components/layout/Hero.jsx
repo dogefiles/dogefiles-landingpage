@@ -11,10 +11,13 @@ import {
   IconButton,
   createIcon,
   useColorModeValue,
+  useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function CallToActionWithVideo() {
+  const { colorMode } = useColorMode();
+  console.log(colorMode);
   return (
     <Container maxW="inherit">
       <Stack
@@ -112,7 +115,7 @@ export default function CallToActionWithVideo() {
               _hover={{ bg: "transparent" }}
               icon={<PlayIcon w={12} h={12} />}
               size={"lg"}
-              color={"white"}
+              color={useColorModeValue("primary.400", "primary.500")}
               position={"absolute"}
               left={"50%"}
               top={"50%"}
@@ -124,8 +127,13 @@ export default function CallToActionWithVideo() {
               align={"center"}
               w={"100%"}
               h={"100%"}
+              // src={
+              //   "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+              // }
               src={
-                "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+                colorMode === "light"
+                  ? "/images/dashboard_light.png"
+                  : "/images/dashboard_dark.png"
               }
             />
           </Box>
