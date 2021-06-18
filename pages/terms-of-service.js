@@ -1,5 +1,6 @@
-import { Heading, Text, Link, UnorderedList, ListItem } from "@chakra-ui/react";
+import { Heading, Text, Link, UnorderedList,Box, ListItem } from "@chakra-ui/react";
 import Page from "components/layout/Page";
+import Style from "../styles/privacy-policy.module.css";
 
 export default function terms_of_service() {
   return (
@@ -10,7 +11,8 @@ export default function terms_of_service() {
       image={"/images/Dogefiles.png"}
       title={"Terms of Service - Dogefiles"}
     >
-      <Heading as="h1" size="2xl">
+    <Box paddingLeft="2%">
+      <Heading as="h1" size="2xl" className={Style.heading}>
         Dogefiles Terms of Service
       </Heading>
 
@@ -48,7 +50,7 @@ export default function terms_of_service() {
         in the event of a dispute.
       </Text>
 
-      <Heading>Access to the Site</Heading>
+      <Heading className={Style.heading}>Access to the Site</Heading>
 
       <Text>
         <strong>Subject to these Terms.</strong> Company grants you a
@@ -96,7 +98,7 @@ export default function terms_of_service() {
         not granted in these Terms.
       </Text>
 
-      <Heading>Third-Party Links &amp; Ads; Other Users</Heading>
+      <Heading className={Style.heading}>Third-Party Links &amp; Ads; Other Users</Heading>
 
       <Text>
         <strong>Third-Party Links &amp; Ads.</strong> The Site may contain links
@@ -148,7 +150,7 @@ export default function terms_of_service() {
         browser type and/or other information.
       </Text>
 
-      <Heading>Disclaimers</Heading>
+      <Heading className={Style.heading}>Disclaimers</Heading>
 
       <Text>
         The site is provided on an &#8220;as-is&#8221; and &#8220;as
@@ -172,7 +174,7 @@ export default function terms_of_service() {
         above limitation may not apply to you.
       </Text>
 
-      <Heading>Limitation on Liability</Heading>
+      <Heading className={Style.heading}>Limitation on Liability</Heading>
 
       <Text>
         To the maximum extent permitted by law, in no event shall company or our
@@ -218,7 +220,7 @@ export default function terms_of_service() {
         effect: Sections 2 through 2.5, Section 3 and Sections 4 through 10.
       </Text>
 
-      <Heading>Copyright Policy.</Heading>
+      <Heading className={Style.heading}>Copyright Policy.</Heading>
 
       <Text>
         Company respects the intellectual property of others and asks that users
@@ -269,7 +271,7 @@ export default function terms_of_service() {
         allegation of copyright infringement.
       </Text>
 
-      <Heading>General</Heading>
+      <Heading className={Style.heading}>General</Heading>
 
       <Text>
         These Terms are subject to occasional revision, and if we make any
@@ -529,11 +531,12 @@ export default function terms_of_service() {
         or the consent of such third party which may own the Marks.
       </Text>
 
-      <Heading>Contact Information</Heading>
+      <Heading className={Style.heading}>Contact Information</Heading>
 
       <Text>Address: India</Text>
 
       <Text>Email: info.dogefiles@gmail.com</Text>
+      </Box>
     </Page>
   );
 }
