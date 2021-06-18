@@ -19,7 +19,7 @@ const AboutUs = () => {
       <Box paddingTop="8px">
         <Center h="100px">
           <Heading as="h3" size="lg">
-            About us
+            About Us
           </Heading>
         </Center>
         <Box align={["center", "left"]} p={5}>
