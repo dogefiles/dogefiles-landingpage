@@ -18,6 +18,7 @@ module.exports = {
       "res-15.cloudinary.com",
       "res-16.cloudinary.com",
       "static.ghost.org",
+      "images.unsplash.com",
     ],
   },
   target: "serverless",

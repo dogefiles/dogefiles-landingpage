@@ -1,7 +1,7 @@
-import { Heading, Box, Badge, Grid, Image } from "@chakra-ui/react";
+import { Heading, Box, Badge, Grid } from "@chakra-ui/react";
 import Page from "components/layout/Page";
 import NextLink from "next/link";
-// import NextImage from "next/image";
+import NextImage from "next/image";
 
 function PostCard({ post }) {
   return (
@@ -14,14 +14,14 @@ function PostCard({ post }) {
         _hover={{ boxShadow: "lg", cursor: "pointer" }}
         // onClick={() => router.push(`/${post.slug}`)}
       >
-        {/* <NextImage
-        src={post.feature_image}
-        alt={post.title}
-        width="382px"
-        height="auto"
-      /> */}
         {post?.feature_image && (
-          <Image src={post.feature_image} alt={post.title} />
+          // <Image src={post.feature_image} alt={post.title} />
+          <NextImage
+            src={post.feature_image}
+            alt={post.title}
+            width="1024px"
+            height="768px"
+          />
         )}
 
         <Box p="6">

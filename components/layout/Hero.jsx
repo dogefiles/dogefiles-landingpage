@@ -14,10 +14,10 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import NextImage from "next/image";
 
 export default function CallToActionWithVideo() {
   const { colorMode } = useColorMode();
-  console.log(colorMode);
   return (
     <Container maxW="inherit">
       <Stack
@@ -120,13 +120,27 @@ export default function CallToActionWithVideo() {
               left={"50%"}
               top={"50%"}
               transform={"translateX(-50%) translateY(-50%)"}
+              zIndex="10"
             />
-            <Image
+            {/* <Image
               alt={"Hero Image"}
               fit={"cover"}
               align={"center"}
               w={"100%"}
               h={"100%"}
+              // src={
+              //   "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
+              // }
+              src={
+                colorMode === "light"
+                  ? "/images/dashboard_light.png"
+                  : "/images/dashboard_dark.png"
+              }
+            /> */}
+            <NextImage
+              alt={"Hero Image"}
+              width={"1366px"}
+              height={"768px"}
               // src={
               //   "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               // }
