@@ -1,5 +1,4 @@
 module.exports = {
-  assetPrefix: process.env.PUBLIC_URL || "/",
   images: {
     domains: [
       "res-1.cloudinary.com",

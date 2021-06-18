@@ -1,4 +1,4 @@
-import { Heading, Box, Badge, Grid } from "@chakra-ui/react";
+import { Heading, Box, Badge, Grid, Image } from "@chakra-ui/react";
 import Page from "components/layout/Page";
 import NextLink from "next/link";
 import NextImage from "next/image";
@@ -15,13 +15,13 @@ function PostCard({ post }) {
         // onClick={() => router.push(`/${post.slug}`)}
       >
         {post?.feature_image && (
-          // <Image src={post.feature_image} alt={post.title} />
-          <NextImage
-            src={post.feature_image}
-            alt={post.title}
-            width="1024px"
-            height="768px"
-          />
+          <Image src={post.feature_image} alt={post.title} />
+          // <NextImage
+          //   src={post.feature_image}
+          //   alt={post.title}
+          //   width="1024px"
+          //   height="768px"
+          // />
         )}
 
         <Box p="6">

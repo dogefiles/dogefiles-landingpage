@@ -122,7 +122,7 @@ export default function CallToActionWithVideo() {
               transform={"translateX(-50%) translateY(-50%)"}
               zIndex="10"
             />
-            {/* <Image
+            <Image
               alt={"Hero Image"}
               fit={"cover"}
               align={"center"}
@@ -136,8 +136,8 @@ export default function CallToActionWithVideo() {
                   ? "/images/dashboard_light.png"
                   : "/images/dashboard_dark.png"
               }
-            /> */}
-            <NextImage
+            />
+            {/* <NextImage
               alt={"Hero Image"}
               width={"1366px"}
               height={"768px"}
@@ -149,7 +149,7 @@ export default function CallToActionWithVideo() {
                   ? "/images/dashboard_light.png"
                   : "/images/dashboard_dark.png"
               }
-            />
+            /> */}
           </Box>
         </Flex>
       </Stack>
