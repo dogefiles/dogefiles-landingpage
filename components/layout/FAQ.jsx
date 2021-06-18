@@ -26,17 +26,13 @@ const Faq = () => {
           <Heading as="h5" size="sm">
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                What does LOREM mean?
+                What is the maximum file upload size?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </Heading>
           <AccordionPanel pb={4}>
-            ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete
-            text) is dummy text that is not meant to mean anything. It is used
-            as a placeholder in magazine layouts, for example, in order to give
-            an impression of the finished document. The text is intentionally
-            unintelligible so that the viewer is not distracted by the content.
+            The maximum file upload size is 100MB.
           </AccordionPanel>
         </AccordionItem>
 
@@ -44,64 +40,27 @@ const Faq = () => {
           <Heading as="h5" size="sm">
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                Where can I subscribe to your newsletter?
+                How much storage a free user get?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </Heading>
           <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            The free users can get upto 20GB.
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
           <Heading as="h5" size="sm">
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                Do you accept orders via Phone or E-mail?
+                How can I contact dogefiles support?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </Heading>
           <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem>
-          <Heading as="h5" size="sm">
-            <AccordionButton>
-              <Box flex="1" textAlign="left">
-                What are your opening hours?
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </Heading>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem>
-          <Heading as="h5" size="sm">
-            <AccordionButton>
-              <Box flex="1" textAlign="left">
-                General Terms & Conditions (GTC)
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </Heading>
-          <AccordionPanel pb={4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            You can connect either with contact form or our Discord
+            https://discord.gg/YnFyaMQY9D
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

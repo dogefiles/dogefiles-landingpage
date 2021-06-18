@@ -14,7 +14,7 @@ const testimonials = [
     name: "Brandon P.",
     role: "Chief Marketing Officer",
     content:
-      "It really saves me time and effort. It is exactly what our business has been lacking. Dogefiles is the most valuable business resource we have EVER purchased. After using Dogefiles my business skyrocketed!",
+      "Dogefiles is one of the best cloud storage services around, It has a free tier, is competitively priced, has very strong security, and is mostly very easy to use as well.",
     avatar:
       "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
   },
@@ -22,7 +22,7 @@ const testimonials = [
     name: "Krysta B.",
     role: "Entrepreneur",
     content:
-      "I didn't even need training. We've used Dogefiles for the last five years. I have gotten at least 50 times the value from Dogefiles. I made back the purchase price in just 48 hours!",
+      "Exactly the cloud storage which I was looking for since years. 100% satisfaction and very generous support! Moreover, they are open too for any new idea you pich.",
     avatar:
       "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
   },
@@ -30,7 +30,7 @@ const testimonials = [
     name: "Darcy L.",
     role: "Movie star",
     content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, Dogefiles is the coolest, most happening thing around! I love Dogefiles!",
+      "5 Stars for excellent support, Very prompt response and so far experience with Dogefiles has been excellent!!!!",
     avatar:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80",
   },
@@ -38,7 +38,7 @@ const testimonials = [
     name: "Daniel T.",
     role: "Musician",
     content:
-      "I am so pleased with this product. Dogefiles is both attractive and highly adaptable. Without Dogefiles, we would have gone bankrupt by now. Thank you for creating this product!",
+      "Had a great experience from the very knowledgeable Dogefiles support, managed to retrieve my data fully and gave some great tips. If in any doubt contact Helpdesk at the first opportunity as they were really prompt and knowledgeable in their fields.",
     avatar:
       "https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
   },

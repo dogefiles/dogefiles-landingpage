@@ -1,4 +1,4 @@
-import { Text, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Page from "components/layout/Page";
 
 export default function contact_us() {
