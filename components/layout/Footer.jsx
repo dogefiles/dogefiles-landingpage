@@ -11,9 +11,11 @@ import {
   IconButton,
   useColorModeValue,
   Icon,
+  Image,
 } from "@chakra-ui/react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiMailSend, BiCloud } from "react-icons/bi";
+import { useRouter } from "next/router";
 
 const Logo = props => {
   return (
@@ -68,6 +70,7 @@ const ListHeader = ({ children }) => {
 };
 
 export default function LargeWithNewsletter() {
+  const router = useRouter();
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -81,7 +84,12 @@ export default function LargeWithNewsletter() {
           <Stack spacing={6}>
             <Box>
               {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
-              <Icon as={BiCloud} boxSize={50} /> Dogefiles
+              <Image
+                src="images/dogefiles_logo.png"
+                alt="Dogefiles Logo"
+                width="11rem"
+                onClick={() => router.push("/")}
+              />
             </Box>
             <Text fontSize={"sm"}>© 2021 Dogefiles. All rights reserved</Text>
             <Stack direction={"row"} spacing={6}>
@@ -108,7 +116,6 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"/help-center"}>Help Center</Link>
             <Link href={"/contact-us"}>Contact us</Link>
             <Link href={"/terms-of-service"}>Terms of Service</Link>
             {/* <Link href={"#"}>Legal</Link> */}

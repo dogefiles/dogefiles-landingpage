@@ -1,5 +1,11 @@
-import { Box, Heading, Text, Avatar, Center } from "@chakra-ui/react";
+import { Box, Heading, Text, Avatar, Center, Icon } from "@chakra-ui/react";
 import Page from "components/layout/Page";
+import {
+  FiCloud,
+  FiDownloadCloud,
+  FiCloudLightning,
+  FiCloudSnow,
+} from "react-icons/fi";
 
 const AboutUs = () => {
   return (
@@ -25,13 +31,13 @@ const AboutUs = () => {
             borderRadius="md"
             width={["100%", "45%"]}
           >
-            <Avatar src="https://bit.ly/broken-link" float="right" />
+            <Icon as={FiCloud} w={10} h={10} float="right" />
             <Heading fontSize="xl" align="left">
-              title
+              Unlimited Uploads
             </Heading>
 
             <Text mt={4} align="left">
-              desc
+              We offer 20 GB of cloud storage to every free user ✌
             </Text>
           </Box>
         </Box>
@@ -45,12 +51,13 @@ const AboutUs = () => {
             borderRadius="md"
             width={["100%", "45%"]}
           >
-            <Avatar src="https://bit.ly/broken-link" float="right" />
+            <Icon as={FiDownloadCloud} w={10} h={10} float="right" />
             <Heading fontSize="xl" align="left">
-              title
+              Unlimited Downloads
             </Heading>
             <Text mt={4} align="left">
-              desc
+              Easily download and share your images and videos among your
+              friends and family 🙋
             </Text>
           </Box>
         </Box>
@@ -64,9 +71,12 @@ const AboutUs = () => {
             borderRadius="md"
             width={["100%", "45%"]}
           >
-            <Avatar src="https://bit.ly/broken-link" float="right" />
-            <Heading fontSize="xl">title</Heading>
-            <Text mt={4}>desc</Text>
+            <Icon as={FiCloudLightning} w={10} h={10} float="right" />
+            <Heading fontSize="xl">Lightning Speed</Heading>
+            <Text mt={4}>
+              Enjoy lightning fast speed on uploads and downloads from our
+              servers across the 🌎
+            </Text>
           </Box>
         </Box>
 
@@ -79,12 +89,13 @@ const AboutUs = () => {
             borderRadius="md"
             width={["100%", "45%"]}
           >
-            <Avatar src="https://bit.ly/broken-link" float="right" />
+            <Icon as={FiCloudSnow} w={10} h={10} float="right" />
             <Heading fontSize="xl" align="left">
-              title
+              Support
             </Heading>
             <Text mt={4} align="left">
-              desc
+              We have 24/7 live support wheter it is summer or winter our
+              support team is always ready to help 🌟
             </Text>
           </Box>
         </Box>

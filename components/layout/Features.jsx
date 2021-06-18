@@ -8,13 +8,6 @@ import {
   Heading,
   useColorModeValue,
 } from "@chakra-ui/react";
-import {
-  FcAssistant,
-  FcDonate,
-  FcInTransit,
-  FcDownload,
-  FcUpload,
-} from "react-icons/fc";
 import { FiCloud, FiDownloadCloud, FiCloudLightning } from "react-icons/fi";
 
 const Feature = ({ title, text, icon }) => {
