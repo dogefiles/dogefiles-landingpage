@@ -13,7 +13,7 @@ import {
 import { useEffect, useState } from "react";
 import { BsDownload, BsCalendar, BsInfoSquare } from "react-icons/bs";
 import nameFormatter from "utils/nameFormatter";
-import fileDesp from "utils/fileTypeDesp";
+import fileDescription from "utils/fileDescription";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -36,7 +36,6 @@ export default function SocialProfileSimple({ file }) {
     }, 1000);
   }, [timer]);
 
-
   const getDownloadLink = async () => {
     const res = await fetch(
       `https://api.dogefiles.io/S3/downloadObject/?id=${file._id}`
@@ -45,12 +44,6 @@ export default function SocialProfileSimple({ file }) {
     const data = await res.json();
     setDownloadLink(data.downloadLink);
   };
-
-
-  
-
-
-
 
   return (
     <>
@@ -73,9 +66,7 @@ export default function SocialProfileSimple({ file }) {
             <Heading fontSize={"xl"} fontFamily={"body"} isTruncated my={2}>
               {fileName}
             </Heading>
-            <Text>
-                {fileDesp(file).short}
-            </Text>
+            <Text>{fileDescription(file.fileType).short}</Text>
           </Box>
 
           <Stack
@@ -154,9 +145,7 @@ export default function SocialProfileSimple({ file }) {
         <HStack flexDirection={["column", "column", "row"]}>
           {/* General Description */}
           <Box textAlign="left" flex="1">
-            <Text>
-            {fileDesp(file).long}
-            </Text>
+            <Text>{fileDescription(file.fileType).long}</Text>
           </Box>
 
           {/* File Info */}
