@@ -14,7 +14,7 @@ const Feature = ({ title, text, icon }) => {
   return (
     <Stack>
       <Flex
-        // w={16}
+        // w={22}
         h={16}
         align={"center"}
         justify={"center"}
@@ -22,7 +22,7 @@ const Feature = ({ title, text, icon }) => {
         rounded={"full"}
         // bg={"gray.100"}
         // bg={useColorModeValue("gray.200", "gray.600")}
-        mb={1}
+        mb={3}
       >
         {icon}
       </Flex>

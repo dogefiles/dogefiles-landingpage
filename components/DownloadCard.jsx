@@ -13,6 +13,7 @@ import {
 import { useEffect, useState } from "react";
 import { BsDownload, BsCalendar, BsInfoSquare } from "react-icons/bs";
 import nameFormatter from "utils/nameFormatter";
+import fileDesp from "utils/fileTypeDesp";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -35,6 +36,7 @@ export default function SocialProfileSimple({ file }) {
     }, 1000);
   }, [timer]);
 
+
   const getDownloadLink = async () => {
     const res = await fetch(
       `https://api.dogefiles.io/S3/downloadObject/?id=${file._id}`
@@ -43,6 +45,12 @@ export default function SocialProfileSimple({ file }) {
     const data = await res.json();
     setDownloadLink(data.downloadLink);
   };
+
+
+  
+
+
+
 
   return (
     <>
@@ -66,8 +74,7 @@ export default function SocialProfileSimple({ file }) {
               {fileName}
             </Heading>
             <Text>
-              This is a {file.fileType} file lorem ipsum Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Obcaecati, voluptatibus.
+                {fileDesp(file).short}
             </Text>
           </Box>
 
@@ -148,10 +155,7 @@ export default function SocialProfileSimple({ file }) {
           {/* General Description */}
           <Box textAlign="left" flex="1">
             <Text>
-              This is a zip file lorem ipsum Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Obcaecati, voluptatibus. Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Porro ratione et quo
-              voluptates aliquam beatae, dolor officia quisquam voluptatem ea?
+            {fileDesp(file).long}
             </Text>
           </Box>
 
