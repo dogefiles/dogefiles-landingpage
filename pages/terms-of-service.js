@@ -1,6 +1,6 @@
 import { Heading, Text, Link, UnorderedList,Box, ListItem } from "@chakra-ui/react";
 import Page from "components/layout/Page";
-import Style from "../styles/privacy-policy.module.css";
+
 
 export default function terms_of_service() {
   return (
@@ -12,7 +12,7 @@ export default function terms_of_service() {
       title={"Terms of Service - Dogefiles"}
     >
     <Box paddingLeft="2%">
-      <Heading as="h1" size="2xl" className={Style.heading}>
+      <Heading as="h1" size="2xl" paddingBottom="2%" paddingTop="3%">
         Dogefiles Terms of Service
       </Heading>
 
@@ -50,15 +50,15 @@ export default function terms_of_service() {
         in the event of a dispute.
       </Text>
 
-      <Heading className={Style.heading}>Access to the Site</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Access to the Site</Heading>
 
-      <Text>
+      <Text paddingBottom="1.5%">
         <strong>Subject to these Terms.</strong> Company grants you a
         non-transferable, non-exclusive, revocable, limited license to access
         the Site solely for your own personal, noncommercial use.
       </Text>
 
-      <Text>
+      <Text >
         <strong>Certain Restrictions.</strong> The rights approved to you in
         these Terms are subject to the following restrictions: (a) you shall not
         sell, rent, lease, transfer, assign, distribute, host, or otherwise
@@ -74,7 +74,7 @@ export default function terms_of_service() {
         must be retained on all copies thereof.
       </Text>
 
-      <Text>
+      <Text paddingBottom="1.5%">
         Company reserves the right to change, suspend, or cease the Site with or
         without notice to you.&nbsp; You approved that Company will not be held
         liable to you or any third-party for any change, interruption, or
@@ -98,9 +98,9 @@ export default function terms_of_service() {
         not granted in these Terms.
       </Text>
 
-      <Heading className={Style.heading}>Third-Party Links &amp; Ads; Other Users</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Third-Party Links &amp; Ads; Other Users</Heading>
 
-      <Text>
+      <Text paddingBottom="1.5%">
         <strong>Third-Party Links &amp; Ads.</strong> The Site may contain links
         to third-party websites and services, and/or display advertisements for
         third-parties.&nbsp; Such Third-Party Links &amp; Ads are not under the
@@ -116,7 +116,7 @@ export default function terms_of_service() {
         practices.
       </Text>
 
-      <Text>
+      <Text >
         <strong>Other Users.</strong> Each Site user is solely responsible for
         any and all of its own User Content.&nbsp; Because we do not control
         User Content, you acknowledge and agree that we are not responsible for
@@ -141,7 +141,7 @@ export default function terms_of_service() {
         his or her settlement with the debtor.&#8221;
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Cookies and Web Beacons.</strong> Like any other website,
         Dogefiles uses ‘cookies’. These cookies are used to store information
         including visitors’ preferences, and the pages on the website that the
@@ -150,7 +150,7 @@ export default function terms_of_service() {
         browser type and/or other information.
       </Text>
 
-      <Heading className={Style.heading}>Disclaimers</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Disclaimers</Heading>
 
       <Text>
         The site is provided on an &#8220;as-is&#8221; and &#8220;as
@@ -174,7 +174,7 @@ export default function terms_of_service() {
         above limitation may not apply to you.
       </Text>
 
-      <Heading className={Style.heading}>Limitation on Liability</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Limitation on Liability</Heading>
 
       <Text>
         To the maximum extent permitted by law, in no event shall company or our
@@ -204,7 +204,7 @@ export default function terms_of_service() {
         exclusion may not apply to you.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Term and Termination.</strong> Subject to this Section, these
         Terms will remain in full force and effect while you use the Site.&nbsp;
         We may suspend or terminate your rights to use the Site at any time for
@@ -220,7 +220,7 @@ export default function terms_of_service() {
         effect: Sections 2 through 2.5, Section 3 and Sections 4 through 10.
       </Text>
 
-      <Heading className={Style.heading}>Copyright Policy.</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Copyright Policy.</Heading>
 
       <Text>
         Company respects the intellectual property of others and asks that users
@@ -271,7 +271,7 @@ export default function terms_of_service() {
         allegation of copyright infringement.
       </Text>
 
-      <Heading className={Style.heading}>General</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">General</Heading>
 
       <Text>
         These Terms are subject to occasional revision, and if we make any
@@ -295,7 +295,7 @@ export default function terms_of_service() {
         MANDATORY BINDING ARBITRATION AND A CLASS ACTION WAIVER.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Applicability of Arbitration Agreement.</strong> All claims and
         disputes in connection with the Terms or the use of any product or
         service provided by the Company that cannot be resolved informally or in
@@ -309,7 +309,7 @@ export default function terms_of_service() {
         provided under the Terms.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Notice Requirement and Informal Dispute Resolution.</strong>{" "}
         Before either party may seek arbitration, the party must first send to
         the other party a written Notice of Dispute describing the nature and
@@ -324,8 +324,8 @@ export default function terms_of_service() {
         award to which either party is entitled.
       </Text>
 
-      <Text>
-        <strong>Arbitration Rules.</strong> Arbitration shall be initiated
+      <Text paddingTop="1.5%">
+        <strong >Arbitration Rules.</strong> Arbitration shall be initiated
         through the American Arbitration Association, an established alternative
         dispute resolution provider that offers arbitration as set forth in this
         section.&nbsp; If AAA is not available to arbitrate, the parties shall
@@ -355,7 +355,7 @@ export default function terms_of_service() {
         and costs of the ADR Provider.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Additional Rules for Non-Appearance Based Arbitration.</strong>{" "}
         If non-appearance based arbitration is elected, the arbitration shall be
         conducted by telephone, online and/or based solely on written
@@ -365,14 +365,14 @@ export default function terms_of_service() {
         parties.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Time Limits.</strong> If you or the Company pursues arbitration,
         the arbitration action must be initiated and/or demanded within the
         statute of limitations and within any deadline imposed under the AAA
         Rules for the pertinent claim.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Authority of Arbitrator.</strong> If arbitration is initiated,
         the arbitrator will decide the rights and liabilities of you and the
         Company, and the dispute will not be consolidated with any other matters
@@ -388,7 +388,7 @@ export default function terms_of_service() {
         award of the arbitrator is final and binding upon you and the Company.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Waiver of Jury Trial.</strong> THE PARTIES HEREBY WAIVE THEIR
         CONSTITUTIONAL AND STATUTORY RIGHTS TO GO TO COURT AND HAVE A TRIAL IN
         FRONT OF A JUDGE OR A JURY, instead electing that all claims and
@@ -402,7 +402,7 @@ export default function terms_of_service() {
         electing that the dispute be resolved by a judge.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Waiver of Class or Consolidated Actions.</strong> All claims and
         disputes within the scope of this arbitration agreement must be
         arbitrated or litigated on an individual basis and not on a class basis,
@@ -411,7 +411,7 @@ export default function terms_of_service() {
         user.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Confidentiality.</strong> All aspects of the arbitration
         proceeding shall be strictly confidential.&nbsp; The parties agree to
         maintain confidentiality unless otherwise required by law.&nbsp; This
@@ -420,7 +420,7 @@ export default function terms_of_service() {
         arbitration award, or to seek injunctive or equitable relief.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Severability.</strong> If any part or parts of this Arbitration
         Agreement are found under the law to be invalid or unenforceable by a
         court of competent jurisdiction, then such specific part or parts shall
@@ -428,24 +428,24 @@ export default function terms_of_service() {
         Agreement shall continue in full force and effect.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Right to Waive.</strong> Any or all of the rights and
         limitations set forth in this Arbitration Agreement may be waived by the
         party against whom the claim is asserted.&nbsp; Such waiver shall not
         waive or affect any other portion of this Arbitration Agreement.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Survival of Agreement.</strong> This Arbitration Agreement will
         survive the termination of your relationship with Company.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Small Claims Court.</strong> Nonetheless the foregoing, either
         you or the Company may bring an individual action in small claims court.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Emergency Equitable Relief.</strong> Anyhow the foregoing,
         either party may seek emergency equitable relief before a state or
         federal court in order to maintain the status quo pending
@@ -454,7 +454,7 @@ export default function terms_of_service() {
         Agreement.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Claims Not Subject to Arbitration.</strong> Notwithstanding the
         foregoing, claims of defamation, violation of the Computer Fraud and
         Abuse Act, and infringement or misappropriation of the other party’s
@@ -485,7 +485,7 @@ export default function terms_of_service() {
         Street, Sacramento, CA 95814, or by telephone at (800) 952-5210.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Electronic Communications.</strong> The communications between
         you and Company use electronic means, whether you use the Site or send
         us emails, or whether Company posts notices on the Site or communicates
@@ -497,7 +497,7 @@ export default function terms_of_service() {
         a hard copy writing.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Entire Terms.</strong> These Terms constitute the entire
         agreement between you and us regarding the use of the Site. Our failure
         to exercise or enforce any right or provision of these Terms shall not
@@ -519,11 +519,11 @@ export default function terms_of_service() {
         assignees.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Your Privacy.</strong> Please read our Privacy Policy.
       </Text>
 
-      <Text>
+      <Text paddingTop="1.5%">
         <strong>Copyright/Trademark Information.</strong> Copyright ©. All
         rights reserved.&nbsp; All trademarks, logos and service marks displayed
         on the Site are our property or the property of other third-parties. You
@@ -531,7 +531,7 @@ export default function terms_of_service() {
         or the consent of such third party which may own the Marks.
       </Text>
 
-      <Heading className={Style.heading}>Contact Information</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Contact Information</Heading>
 
       <Text>Address: India</Text>
 

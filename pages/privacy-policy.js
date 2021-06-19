@@ -1,6 +1,6 @@
 import { Heading, Text, UnorderedList, ListItem,Box } from "@chakra-ui/react";
 import Page from "components/layout/Page";
-import Style from "../styles/privacy-policy.module.css";
+
 
 export default function privacy_policy() {
   return (
@@ -12,7 +12,7 @@ export default function privacy_policy() {
       title={"Privacy Policy - Dogefiles"}
     >
     <Box paddingLeft="2%">
-      <Heading as="h1" size="2xl" className={Style.heading} >
+      <Heading as="h1" size="2xl" paddingBottom="2%" paddingTop="3%" >
         Privacy Policy for Dogefiles
       </Heading>
 
@@ -42,14 +42,14 @@ export default function privacy_policy() {
         information collected offline or via channels other than this website.
       </Text>
 
-      <Heading className={Style.heading}>Consent</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Consent</Heading>
 
       <Text>
         By using our website, you hereby consent to our Privacy Policy and agree
         to its terms.
       </Text>
 
-      <Heading className={Style.heading}>Information we collect</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Information we collect</Heading>
 
       <Text>
         The personal information that you are asked to provide, and the reasons
@@ -70,7 +70,7 @@ export default function privacy_policy() {
         address, and telephone number.
       </Text>
 
-      <Heading className={Style.heading}>How we use your information</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">How we use your information</Heading>
 
       <Text>
         We use the information we collect in various ways, including to:
@@ -93,7 +93,7 @@ export default function privacy_policy() {
         <ListItem>Find and prevent fraud</ListItem>
       </UnorderedList>
 
-      <Heading className={Style.heading}>Log Files</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Log Files</Heading>
 
       <Text>
         Dogefiles follows a standard procedure of using log files. These files
@@ -108,7 +108,7 @@ export default function privacy_policy() {
         information.
       </Text>
 
-      <Heading className={Style.heading}>Cookies and Web Beacons</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Cookies and Web Beacons</Heading>
 
       <Text>
         Like any other website, Dogefiles uses cookies. These cookies are used
@@ -124,7 +124,7 @@ export default function privacy_policy() {
         <a href="#">What Are Cookies&#8221; from Cookie Consent</a>.
       </Text>
 
-      <Heading className={Style.heading}>Advertising Partners Privacy Policies</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Advertising Partners Privacy Policies</Heading>
 
       <Text>
         You may consult this list to find the Privacy Policy for each of the
@@ -146,7 +146,7 @@ export default function privacy_policy() {
         are used by third-party advertisers.
       </Text>
 
-      <Heading className={Style.heading}>Third Party Privacy Policies</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Third Party Privacy Policies</Heading>
 
       <Text>
         Dogefiles&#8217;s Privacy Policy does not apply to other advertisers or
@@ -163,7 +163,7 @@ export default function privacy_policy() {
         websites.
       </Text>
 
-      <Heading className={Style.heading}>
+      <Heading paddingBottom="2%" paddingTop="3%">
         CCPA Privacy Rights (Do Not Sell My Personal Information)
       </Heading>
 
@@ -193,7 +193,7 @@ export default function privacy_policy() {
         like to exercise any of these rights, please contact us.
       </Text>
 
-      <Heading className={Style.heading}>GDPR Data Protection Rights</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">GDPR Data Protection Rights</Heading>
 
       <Text>
         We would like to make sure you are fully aware of all of your data
@@ -238,7 +238,7 @@ export default function privacy_policy() {
         like to exercise any of these rights, please contact us.
       </Text>
 
-      <Heading className={Style.heading}>Children&#8217;s Information</Heading>
+      <Heading paddingBottom="2%" paddingTop="3%">Children&#8217;s Information</Heading>
 
       <Text>
         Another part of our priority is adding protection for children while
