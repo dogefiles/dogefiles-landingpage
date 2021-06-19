@@ -137,11 +137,7 @@ export default function SocialProfileSimple({ file }) {
         </Flex>
 
         {/* Ad 1 */}
-        <Image
-          src="https://i.postimg.cc/0KSjSvds/bannar-ad.png"
-          width="100%"
-          my={6}
-        />
+        <Image src="/images/upper_ad.gif" width="100%" my={6} />
         <HStack flexDirection={["column", "column", "row"]}>
           {/* General Description */}
           <Box textAlign="left" flex="1">
@@ -187,11 +183,7 @@ export default function SocialProfileSimple({ file }) {
           </Box>
         </HStack>
         {/* Ad 2 */}
-        <Image
-          src="https://i.postimg.cc/0KSjSvds/bannar-ad.png"
-          width="100%"
-          my={6}
-        />
+        <Image src="/images/bottom_ad.png" width="100%" my={6} />
       </Stack>
     </>
   );
