@@ -33,7 +33,7 @@ export default function WithSubnavigation() {
         width="100%"
         // maxWidth="1536px" its old max width dont remove this line
         maxWidth="1400px"
-        zIndex={"1"}
+        zIndex={"2"}
       >
         <Flex
           bg={useColorModeValue("white", "gray.800")}

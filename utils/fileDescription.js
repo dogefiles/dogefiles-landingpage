@@ -38,6 +38,12 @@ const fileDescription = fileType => {
           "exe is a common filename extension denoting an executable file for Microsoft Windows.",
         long: "An .exe is a very common file type. The .exe file extension is short for “executable.” These files are most commonly used on Windows® computers to install or run software applications.",
       };
+    case "rar":
+      return {
+        short:
+          "RAR stands for “Roshal Archive” is a proprietary archive file format that supports data compression, error recovery and file spanning.",
+        long: "It was developed in 1993 by Russian software engineer Eugene Roshal and the software is licensed by win.rar GmbH. The name RAR stands for Roshal Archive.",
+      };
     case "zip":
       return {
         short:
