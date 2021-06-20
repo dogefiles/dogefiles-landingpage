@@ -85,7 +85,7 @@ export default function LargeWithNewsletter() {
             <Box>
               {/* <Logo color={useColorModeValue("gray.700", "white")} /> */}
               <Image
-                src="images/dogefiles_logo.png"
+                src="/images/dogefiles_logo.png"
                 alt="Dogefiles Logo"
                 width="11rem"
                 onClick={() => router.push("/")}
