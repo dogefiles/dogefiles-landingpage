@@ -1,5 +1,6 @@
 const fileDescription = fileType => {
   switch (fileType) {
+    //Image Type
     case "png":
       return {
         short: "PNG stands for “Portable Graphics Format”.",
@@ -17,6 +18,20 @@ const fileDescription = fileType => {
           "JPEG is a widely used compressed image format for containing digital images.",
         long: "JPEG is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography. The degree of compression can be adjusted, allowing a selectable trade-off between storage size and image quality.",
       };
+    case "gif":
+      return {
+        short: "GIF stands for “Graphics Interchange Format”",
+        long: "The Graphics Interchange Format is a bitmap image format that was developed by a team at the online services provider CompuServe led by American computer scientist Steve Wilhite on 15 June 1987.",
+      };
+
+    //Media Type
+    case "mp4":
+      return {
+        short: "MP4 stands for “MPEG-4 Part 14 or MP4”",
+        long: "MP4 is a digital multimedia container format most commonly used to store video and audio, but it can also be used to store other data such as subtitles and still images. Like most modern container formats, it allows streaming over the Internet. The only filename extension for MPEG-4 Part 14 files as defined by the specification is .mp4. MPEG-4 Part 14 (formally ISO/IEC 14496-14:2003) is a standard specified as a part of MPEG-4.",
+      };
+
+    //Document Type
     case "doc":
       return {
         short: "The doc format is a computer file format for text documents",
@@ -27,11 +42,13 @@ const fileDescription = fileType => {
         short: "PDF stands for 'portable document format'.",
         long: "Portable Document Format, standardized as ISO 32000, is a file format developed by Adobe in 1993 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.",
       };
-    case "gif":
+    case "csv":
       return {
-        short: "GIF stands for “Graphics Interchange Format”.",
-        long: "The Graphics Interchange Format is a bitmap image format that was developed by a team at the online services provider CompuServe led by American computer scientist Steve Wilhite on 15 June 1987.",
+        short:
+          "A CSV is a comma-separated values file, which allows data to be saved in a tabular format.",
+        long: "A comma-separated values file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.",
       };
+
     case "exe":
       return {
         short:
@@ -50,12 +67,7 @@ const fileDescription = fileType => {
           "ZIP is an archive file format that supports lossless data compression.",
         long: "ZIP is an archive file format that supports lossless data compression. A ZIP file may contain one or more files or directories that may have been compressed. The ZIP file format permits a number of compression algorithms, though DEFLATE is the most common.",
       };
-    case "csv":
-      return {
-        short:
-          "A CSV is a comma-separated values file, which allows data to be saved in a tabular format.",
-        long: "A comma-separated values file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format.",
-      };
+
     default:
       return {
         short: "Unknown file type",

@@ -9,11 +9,14 @@ import {
   Image,
   HStack,
   Flex,
+  useToast,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { BsDownload, BsCalendar, BsInfoSquare } from "react-icons/bs";
 import nameFormatter from "utils/nameFormatter";
 import fileDescription from "utils/fileDescription";
+import fileSizeFormatter from "utils/fileSizeFormatter";
+import copyToClipboard from "utils/copyToClipboard";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -21,6 +24,7 @@ export default function SocialProfileSimple({ file }) {
   const [timerValue, setTimerValue] = useState(5);
   const [downloadLink, setDownloadLink] = useState(null);
   const fileName = file.fileName && nameFormatter(file.fileName);
+  const toast = useToast();
 
   let timerDuration = 5;
   useEffect(() => {
@@ -52,7 +56,7 @@ export default function SocialProfileSimple({ file }) {
           justifyContent="space-between"
           w={"full"}
           bg={useColorModeValue("white", "gray.900")}
-          boxShadow={"2xl"}
+          boxShadow={"xl"}
           rounded={"lg"}
           p={[2, 3, 4, 6]}
           textAlign={"center"}
@@ -80,6 +84,17 @@ export default function SocialProfileSimple({ file }) {
               rounded={"full"}
               _focus={{
                 bg: "gray.200",
+              }}
+              onClick={() => {
+                copyToClipboard(window.location);
+                toast({
+                  title: "Copied",
+                  description: "Download link copied to clipboard",
+                  position: "bottom",
+                  status: "success",
+                  duration: 2000,
+                  isClosable: true,
+                });
               }}
             >
               Share
@@ -113,22 +128,19 @@ export default function SocialProfileSimple({ file }) {
                 fontSize={["xs", "sm"]}
                 mx="auto"
                 rounded={"full"}
-                bg={"blue.400"}
+                bg={"primary.400"}
                 color={"white"}
-                boxShadow={
-                  "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-                }
                 _hover={{
-                  bg: "blue.500",
+                  bg: "primary.500",
                 }}
                 _focus={{
-                  bg: "blue.500",
+                  bg: "primary.500",
                 }}
                 onClick={() => timerDuration === 5 && setTimer(true)}
               >
                 <Text fontSize={[10, 12, "auto"]}>
                   {timerValue === 5
-                    ? `Download ${Math.floor(file.fileSize / 1000)} Kb`
+                    ? `Download ${fileSizeFormatter(file.fileSize)}`
                     : timerValue}
                 </Text>
               </Button>
@@ -137,7 +149,7 @@ export default function SocialProfileSimple({ file }) {
         </Flex>
 
         {/* Ad 1 */}
-        <Image src="/images/upper_ad.png" width="100%" my={6} />
+        {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}
         <HStack flexDirection={["column", "column", "row"]}>
           {/* General Description */}
           <Box textAlign="left" flex="1">
@@ -154,7 +166,8 @@ export default function SocialProfileSimple({ file }) {
                 px={["2px", "2px", "4px", "6px"]}
                 alignItems="center"
               >
-                <Icon as={BsCalendar} boxSize={5} color="green" />
+                {/* <Icon as={BsCalendar} boxSize={5} color="green" /> */}
+                <Text>Date</Text>
                 <Text>{new Date(file.createdAt).toDateString()}</Text>
               </HStack>
               <HStack
@@ -163,7 +176,8 @@ export default function SocialProfileSimple({ file }) {
                 px={["2px", "2px", "4px", "6px"]}
                 alignItems="center"
               >
-                <Icon as={BsInfoSquare} boxSize={5} color="green" />
+                {/* <Icon as={BsInfoSquare} boxSize={5} color="green" /> */}
+                <Text>Type</Text>
                 <Text>{file.fileType}</Text>
               </HStack>
               <HStack
@@ -172,7 +186,8 @@ export default function SocialProfileSimple({ file }) {
                 px={["2px", "2px", "4px", "6px"]}
                 alignItems="center"
               >
-                <Icon as={BsDownload} boxSize={5} color="green" />
+                {/* <Icon as={BsDownload} boxSize={5} color="green" /> */}
+                <Text>Downloads</Text>
                 <Text>
                   {file.downloads && file.downloads.length > 0
                     ? file.downloads.length
@@ -183,7 +198,7 @@ export default function SocialProfileSimple({ file }) {
           </Box>
         </HStack>
         {/* Ad 2 */}
-        <Image src="/images/bottom_ad.jpg" width="100%" my={6} />
+        {/* <Image src="/images/bottom_ad.jpg" width="100%" my={6} /> */}
       </Stack>
     </>
   );

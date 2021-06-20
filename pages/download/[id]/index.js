@@ -16,14 +16,14 @@ export default function download({ file }) {
         } - Dogefiles`}
       >
         <Flex py={[1, 2, 2, 6]}>
-          <Image src="/images/side_ad.jpg" />
+          {/* <Image src="/images/side_ad.jpg" /> */}
           {file && file.fileName ? (
             <DownloadCard file={file} />
           ) : (
             <Heading my="auto">The download link does not exists</Heading>
           )}
 
-          <Image src="/images/side_ad.jpg" />
+          {/* <Image src="/images/side_ad.jpg" /> */}
         </Flex>
       </Page>
     </>
