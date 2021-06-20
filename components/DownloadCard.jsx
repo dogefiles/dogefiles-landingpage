@@ -12,11 +12,11 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { BsDownload, BsCalendar, BsInfoSquare } from "react-icons/bs";
 import nameFormatter from "utils/nameFormatter";
-import fileDescription from "utils/fileDescription";
+import fileDescriptionIdentifier from "utils/fileDescriptionIdentifier";
 import fileSizeFormatter from "utils/fileSizeFormatter";
 import copyToClipboard from "utils/copyToClipboard";
+import fileIconIdentifier from "utils/fileIconIdentifier";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -24,6 +24,7 @@ export default function SocialProfileSimple({ file }) {
   const [timerValue, setTimerValue] = useState(5);
   const [downloadLink, setDownloadLink] = useState(null);
   const fileName = file.fileName && nameFormatter(file.fileName);
+  const fileDescription = fileDescriptionIdentifier(file.fileType);
   const toast = useToast();
 
   let timerDuration = 5;
@@ -63,14 +64,11 @@ export default function SocialProfileSimple({ file }) {
           flexDirection={["column", "column", "column", "row"]}
         >
           <Box textAlign="left">
-            <Image
-              src="https://anonym.ninja/images/icons/jpg.png"
-              boxSize="20"
-            />
+            <Image src={fileIconIdentifier(file.fileType)} boxSize="20" />
             <Heading fontSize={"xl"} fontFamily={"body"} isTruncated my={2}>
               {fileName}
             </Heading>
-            <Text>{fileDescription(file.fileType).short}</Text>
+            <Text>{fileDescription.short}</Text>
           </Box>
 
           <Stack
@@ -153,7 +151,7 @@ export default function SocialProfileSimple({ file }) {
         <HStack flexDirection={["column", "column", "row"]}>
           {/* General Description */}
           <Box textAlign="left" flex="1">
-            <Text>{fileDescription(file.fileType).long}</Text>
+            <Text>{fileDescription.long}</Text>
           </Box>
 
           {/* File Info */}

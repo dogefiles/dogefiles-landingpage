@@ -1,4 +1,4 @@
-const fileDescription = fileType => {
+const fileDescriptionIdentifier = fileType => {
   switch (fileType) {
     //Image Type
     case "png":
@@ -75,4 +75,4 @@ const fileDescription = fileType => {
       };
   }
 };
-export default fileDescription;
+export default fileDescriptionIdentifier;
