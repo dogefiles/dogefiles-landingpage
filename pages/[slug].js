@@ -1,6 +1,7 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Heading, Text } from "@chakra-ui/layout";
 import Page from "components/layout/Page";
+import { BLOG_URL, CONTENT_API_KEY } from "global/envs";
 
 export default function blog_post({ post }) {
   return (
@@ -85,8 +86,8 @@ export default function blog_post({ post }) {
 }
 
 export const getStaticProps = async context => {
-  const contentApiKey = process.env.CONTENT_API_KEY;
-  const blogUrl = process.env.BLOG_URL;
+  const contentApiKey = CONTENT_API_KEY;
+  const blogUrl = BLOG_URL;
   const res = await fetch(
     `${blogUrl}/ghost/api/v3/content/posts/slug/${context.params.slug}/?key=${contentApiKey}`
   );
@@ -101,8 +102,8 @@ export const getStaticProps = async context => {
 };
 
 export const getStaticPaths = async () => {
-  const contentApiKey = process.env.CONTENT_API_KEY;
-  const blogUrl = process.env.BLOG_URL;
+  const contentApiKey = CONTENT_API_KEY;
+  const blogUrl = BLOG_URL;
   try {
     const res = await fetch(
       `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`

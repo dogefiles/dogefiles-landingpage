@@ -1,9 +1,9 @@
 import posts_slug from "public/posts-slug.json";
+import { HOST_URL } from "global/envs";
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
 
 export default async (req, res) => {
-  const HOST_URL = process.env.HOST_URL;
   try {
     // An array with your links
     const links = [];

@@ -21,6 +21,7 @@ import { FiMenu, FiX, FiChevronDown, FiChevronRight } from "react-icons/fi";
 import ThemeToggle from "./ThemeToggle";
 import NextImage from "next/image";
 import { useRouter } from "next/router";
+import { APP_URL } from "global/envs";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -99,7 +100,7 @@ export default function WithSubnavigation() {
               fontSize={"sm"}
               fontWeight={400}
               variant={"link"}
-              href={"https://app.dogefiles.io/signin"}
+              href={`${APP_URL}/signin`}
             >
               Sign In
             </Button>
@@ -110,7 +111,7 @@ export default function WithSubnavigation() {
               fontWeight={600}
               color={"white"}
               bg={"primary.400"}
-              href={"https://app.dogefiles.io/signup"}
+              href={`${APP_URL}/signup`}
               _hover={{
                 bg: "primary.300",
               }}

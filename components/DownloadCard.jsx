@@ -17,6 +17,7 @@ import fileDescriptionIdentifier from "utils/fileDescriptionIdentifier";
 import fileSizeFormatter from "utils/fileSizeFormatter";
 import copyToClipboard from "utils/copyToClipboard";
 import fileIconIdentifier from "utils/fileIconIdentifier";
+import { SERVER_URL } from "global/envs";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -42,9 +43,7 @@ export default function SocialProfileSimple({ file }) {
   }, [timer]);
 
   const getDownloadLink = async () => {
-    const res = await fetch(
-      `https://api.dogefiles.io/S3/downloadObject/?id=${file._id}`
-    );
+    const res = await fetch(`${SERVER_URL}/S3/downloadObject/?id=${file._id}`);
     console.log(res);
     const data = await res.json();
     setDownloadLink(data.downloadLink);

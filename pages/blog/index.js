@@ -2,6 +2,7 @@ import { Heading, Box, Badge, Grid, Image } from "@chakra-ui/react";
 import Page from "components/layout/Page";
 import NextLink from "next/link";
 import NextImage from "next/image";
+import { BLOG_URL, CONTENT_API_KEY } from "global/envs";
 
 function PostCard({ post }) {
   return (
@@ -77,8 +78,8 @@ export default function blog({ posts }) {
 }
 
 export const getStaticProps = async context => {
-  const contentApiKey = process.env.CONTENT_API_KEY;
-  const blogUrl = process.env.BLOG_URL;
+  const contentApiKey = CONTENT_API_KEY;
+  const blogUrl = BLOG_URL;
 
   const res = await fetch(
     `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`

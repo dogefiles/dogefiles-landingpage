@@ -2,6 +2,7 @@ import { Image, Flex, Heading } from "@chakra-ui/react";
 import DownloadCard from "components/DownloadCard";
 import Page from "components/layout/Page";
 import nameFormatter from "utils/nameFormatter";
+import { SERVER_URL } from "global/envs";
 
 export default function download({ file }) {
   const fileName = file.fileName && nameFormatter(file.fileName);
@@ -32,7 +33,7 @@ export default function download({ file }) {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const res = await fetch(`${process.env.SERVER_URL}/S3/objectInfo/${id}`);
+  const res = await fetch(`${SERVER_URL}/S3/objectInfo/${id}`);
 
   const data = await res.json();
   return {
