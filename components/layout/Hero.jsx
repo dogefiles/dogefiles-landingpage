@@ -35,7 +35,7 @@ export default function CallToActionWithVideo() {
             <Text
               as={"span"}
               position={"relative"}
-              fontSize={{ base: "50px", sm: "80px"}}
+              fontSize={{ base: "50px", sm: "80px" }}
               // _after={{
               //   content: "''",
               //   width: "full",
@@ -55,8 +55,8 @@ export default function CallToActionWithVideo() {
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            Create a free Dogefiles account and get upto <strong>20GB</strong> free. We are here
-            to spread joy among every individual.
+            Create a free Dogefiles account and get upto <strong>20GB</strong>{" "}
+            free. We are here to spread joy among every individual.
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -121,7 +121,7 @@ export default function CallToActionWithVideo() {
               left={"50%"}
               top={"50%"}
               transform={"translateX(-50%) translateY(-50%)"}
-              zIndex="10"
+              // zIndex="1"
             />
             <Image
               alt={"Hero Image"}
