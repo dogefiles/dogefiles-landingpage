@@ -68,13 +68,13 @@ export default function SocialProfileSimple({ file }) {
           <Box textAlign="left">
            
             
-            <Grid templateColumns="repeat(2, 1fr)" gap={["0","10","10","400"]}>
+            <HStack spacing={["25px","200px","350px","650px"]}>
               <Image src={fileIconIdentifier(file.fileType)} boxSize="20" />
               <Box>
               <Text><strong>Date: </strong>{new Date(file.createdAt).toDateString()}</Text>
               <Text><strong>Type: </strong>{file.fileType}</Text>
               </Box>  
-            </Grid>
+            </HStack>
             
             <Heading fontSize={"xl"} fontFamily={"body"} isTruncated my={2}>
             {fileName}  
@@ -82,13 +82,15 @@ export default function SocialProfileSimple({ file }) {
             <Text>{fileDescription.short}</Text>
 
             
-            <HStack spacing="25px" paddingTop={["2%","2%","2%","2%"]} >
-            <Box rounded={"full"} w={["80px","180px"]} h="10" bg="blue" textAlign="center" color="white" p={2} fontSize={["x-small","large"]}>Downloads: 
-             {file.downloads && file.downloads.length > 0
+            <HStack spacing="20px" paddingTop={["2%","2%","2%","2%"]} >
+            <Box rounded={"full"} w={["180px","180px","180px","180px"]} h="10" bg="blue" textAlign={["center","center","center","center"]} color="white" p={2} fontSize={["xs","large"]}>
+             <Text>Downloads: {file.downloads && file.downloads.length > 0
               ? file.downloads.length
-              : 0}
+              : 0}</Text>
             </Box>
-              <Box paddingLeft={["0","400px"]}>
+              <Box paddingLeft={["0","40px","220px","510px"]}
+              
+              >
               <Button
                 // flex={1}
                 fontSize={["xs", "sm"]}
@@ -157,8 +159,6 @@ export default function SocialProfileSimple({ file }) {
                   </Text>
                 </Button>
               )}
-              
-  
               </Box>
           </HStack>
            
@@ -178,19 +178,25 @@ export default function SocialProfileSimple({ file }) {
 
         {/* Ad 1 */}
         {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}
-        <VStack>
+        <VStack paddingTop="5%">
           {/* General Description */}
-          <Box textAlign="left" paddingTop="5%">
+          <Box textAlign="left" padding="3%"  bg={useColorModeValue("white", "gray.900")}
+          boxShadow={"xl"}
+          rounded={"lg"}>
             <Text>{fileDescription.long}</Text>
           </Box>
-          <Box textAlign="left" width="100%" paddingTop="8%">
-            <Text fontSize="20px"><strong>Unlimited Uploads</strong></Text>
-            <Text>Signup today and enjoy free cloud storage upto 20 GB ✌</Text>
-            <Text fontSize="20px"><strong>Unlimited Downloads</strong></Text>
-            <Text>Easily download and share your images and videos among your friends and family 🙋</Text>
-            <Text fontSize="20px"><strong>Lightning Speed</strong></Text>
-            <Text>Enjoy lightning fast speed on uploads and downloads from our servers across the 🌎</Text>
-          </Box>
+            <Box paddingTop="5%" width="100%">
+            <Box textAlign="left" padding="3%"  bg={useColorModeValue("white", "gray.900")}
+          boxShadow={"xl"}
+          rounded={"lg"}>
+              <Text fontSize="20px"><strong>Unlimited Uploads</strong></Text>
+              <Text>Signup today and enjoy free cloud storage upto 20 GB ✌</Text><br/>
+              <Text fontSize="20px"><strong>Unlimited Downloads</strong></Text>
+              <Text>Easily download and share your images and videos among your friends and family 🙋</Text><br/>
+              <Text fontSize="20px"><strong>Lightning Speed</strong></Text>
+              <Text>Enjoy lightning fast speed on uploads and downloads from our servers across the 🌎</Text>
+            </Box>
+            </Box>
           </VStack>
           {/* File Info */}
          {/* <Box flex="1">

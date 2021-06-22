@@ -24,13 +24,13 @@ export default function download({ file }) {
 
 
         <Flex py={[1, 2, 2, 6]}>
-           <Image display={["none","none","block"]} visibility={"hidden"} src="/images/side_ad.jpg" /> 
+           <Image display={["none","none","none","block"]} visibility={"hidden"} src="/images/side_ad.jpg" /> 
           
         
           
           <Box
             paddingRight={["2%"]}
-            width={["100%", "70%"]}
+            width={["100%","100%","100%", "100%"]}
           >
          
               {file && file.fileName ? (
@@ -41,7 +41,7 @@ export default function download({ file }) {
           </Box>
         
       
-           <Image display={["none","none","block"]} visibility="hidden" src="/images/side_ad.jpg" /> 
+           <Image display={["none","none","none","block"]} visibility={"hidden"} src="/images/side_ad.jpg" /> 
         </Flex>
       
 
