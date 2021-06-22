@@ -12,6 +12,8 @@ export const SERVER_URL = isEnvDev
   ? "http://localhost:5000"
   : "https://api.dogefiles.io";
 
+export const ADSENSE_PUB_ID = process.env.ADSENSE_PUB_ID;
+
 export const NEXT_PUBLIC_GOOGLE_ANALYTICS =
   process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS;
 
