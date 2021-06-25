@@ -1,7 +1,7 @@
 const fileIconIdentifier = fileType => {
   const iconType = iconName => `/file_icons/${iconName}.png`;
   const fileTypes = [
-    "after-effetcs",
+    "after-effects",
     "ai",
     "audition",
     "avi",
@@ -38,6 +38,8 @@ const fileIconIdentifier = fileType => {
     "xls",
     "xml",
     "zip",
+    "7z",
+    "dll"
   ];
 
   const icon = fileTypes.find(fileT => fileT === fileType);

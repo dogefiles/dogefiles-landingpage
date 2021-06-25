@@ -4,11 +4,14 @@ import {
   Text,
   Stack,
   Button,
-  Icon,
+  Circle,
   useColorModeValue,
   Image,
   HStack,
   Flex,
+  Icon,
+  Tooltip,
+  Link,
   useToast,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
@@ -17,7 +20,9 @@ import fileDescriptionIdentifier from "utils/fileDescriptionIdentifier";
 import fileSizeFormatter from "utils/fileSizeFormatter";
 import copyToClipboard from "utils/copyToClipboard";
 import fileIconIdentifier from "utils/fileIconIdentifier";
+import { FaFacebookF, FaGoogle, FaSpotify, FaDiscord, FaInternetExplorer, FaTwitter, FaYoutube, FaGlobe, } from "react-icons/fa";
 import { SERVER_URL } from "global/envs";
+import Features from "./layout/Features";
 
 export default function SocialProfileSimple({ file }) {
   const [timer, setTimer] = useState(false);
@@ -63,8 +68,20 @@ export default function SocialProfileSimple({ file }) {
           flexDirection={["column", "column", "column", "row"]}
         >
           <Box textAlign="left">
-            <Image src={fileIconIdentifier(file.fileType)} boxSize="20" />
-            <Heading fontSize={"xl"} fontFamily={"body"} isTruncated my={2}>
+            <Image
+              mb={5}
+              src={fileIconIdentifier(file.fileType)}
+              boxSize="20"
+            />
+            <Heading
+              fontSize="2xl"
+              fontWeight="bold"
+              bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+              bgClip="text"
+              fontFamily={"body"}
+              isTruncated
+              my={2}
+            >
               {fileName}
             </Heading>
             <Text>{fileDescription.short}</Text>
@@ -76,12 +93,8 @@ export default function SocialProfileSimple({ file }) {
             spacing={[2, 2, 4, 4]}
           >
             <Button
-              // flex={1}
-              fontSize={["xs", "sm"]}
-              rounded={"full"}
-              _focus={{
-                bg: "gray.200",
-              }}
+              colorScheme="teal"
+              variant="outline"
               onClick={() => {
                 copyToClipboard(window.location);
                 toast({
@@ -100,42 +113,21 @@ export default function SocialProfileSimple({ file }) {
             {/* Download Button */}
             {downloadPermission ? (
               <Button
+                colorScheme="teal"
+                variant="solid"
                 as={"a"}
                 href={downloadLink}
-                fontSize={["xs", "sm"]}
-                mx="auto"
-                rounded={"full"}
-                bg={"blue.400"}
-                color={"white"}
-                boxShadow={
-                  "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-                }
-                _hover={{
-                  bg: "blue.500",
-                }}
-                _focus={{
-                  bg: "blue.500",
-                }}
               >
-                <Text fontSize={[10, 12, "auto"]}>Start Download</Text>
+                <Text>Start Download</Text>
               </Button>
             ) : (
               <Button
                 // flex={1}
-                fontSize={["xs", "sm"]}
-                mx="auto"
-                rounded={"full"}
-                bg={"primary.400"}
-                color={"white"}
-                _hover={{
-                  bg: "primary.500",
-                }}
-                _focus={{
-                  bg: "primary.500",
-                }}
+                colorScheme="teal"
+                variant="solid"
                 onClick={() => timerDuration === 5 && setTimer(true)}
               >
-                <Text fontSize={[10, 12, "auto"]}>
+                <Text >
                   {timerValue === 5
                     ? `Download ${fileSizeFormatter(file.fileSize)}`
                     : timerValue}
@@ -145,18 +137,119 @@ export default function SocialProfileSimple({ file }) {
           </Stack>
         </Flex>
 
-        {/* Ad 1 */}
-        {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}
-        <HStack flexDirection={["column", "column", "row"]}>
-          {/* General Description */}
-          <Box textAlign="left" flex="1">
-            <Text>{fileDescription.long}</Text>
-          </Box>
-
-          {/* File Info */}
-          <Box flex="1">
-            <Text fontWeight="bold">Info:</Text>
-            <Stack direction={"column"} border="1px" borderColor="gray.300">
+        <Stack>
+          <Circle
+            position="absolute"
+            bg="blue.100"
+            opacity="0.1"
+            w="300px"
+            h="300px"
+            alignSelf="flex-end"
+          />
+          <Flex
+            justifyContent="space-between"
+            mt={20}
+            w={"full"}
+            bg={useColorModeValue("white", "gray.900")}
+            boxShadow={"xl"}
+            rounded={"lg"}
+            p={[2, 3, 4, 6]}
+            textAlign={"center"}
+            flexDirection={["column", "column", "column", "row"]}
+          >
+            <Box textAlign="left">
+              {/* <Icon as={FaFacebookF} boxSize="50" />   */}
+              <Text
+                fontSize="2xl"
+                fontWeight="bold"
+                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                bgClip="text"
+              >
+                {fileDescription.heading}
+              </Text>
+              <Text>{fileDescription.long}</Text>
+              { (file.fileType === "rar" || file.fileType === "zip" || file.fileType === "7z") && <Stack direction="row" spacing={4} mt={8} align="center">
+                 <Link target="_blank" href="https://www.win-rar.com/download.html">
+                 <Button colorScheme="teal" variant="solid">
+                  Download Winrar
+                </Button>
+                </Link>
+              </Stack>
+              }
+            </Box>
+          </Flex>
+        </Stack>
+        
+        <Stack>
+          <Flex
+            justifyContent="space-between"
+            mt={10}
+            w={"full"}
+            bg={useColorModeValue("white", "gray.900")}
+            boxShadow={"xl"}
+            rounded={"lg"}
+            p={[2, 3, 4, 6]}
+            textAlign={"center"}
+            flexDirection={["column", "column", "column", "row"]}
+          >
+            {/* <Box
+              flex="1"
+              textAlign="left"
+              p={5}
+              shadow="md"
+              borderWidth="1px"
+              borderRadius="md"
+              mr={[0, 0, 0, 4]}
+              my={[2, 3, 4, 0]}
+            >
+              <Text
+                fontSize="2xl"
+                fontWeight="bold"
+                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                bgClip="text"
+              >
+                Doge User Info
+              </Text>
+              <HStack
+                justifyContent="space-between"
+                width="100%"
+                px={["2px", "2px", "4px", "6px"]}
+                alignItems="center"
+              >
+                <Image
+                  alignSelf="center"
+                  mt={2}
+                  borderRadius="full"
+                  backgroundColor="transparent"
+                  boxShadow="lg"
+                  boxSize="100px"
+                  src="https://i.postimg.cc/Gtk6Lcd3/Profile-Picture-Maker.png"
+                />
+                <Icon as={FaFacebookF} boxSize={["30","30","30", "42"]} />
+                <Icon as={FaTwitter} boxSize={["30","30","30", "42"]} />
+                <Icon as={FaGlobe} boxSize={["30","30","30", "42"]} />
+                <Icon as={FaYoutube} boxSize={["30","30","30", "42"]} />
+                <Icon as={FaDiscord} boxSize={["30","30","30", "42"]} />
+              </HStack>
+            </Box> */}
+            <Box
+              flex="1"
+              textAlign="left"
+              p={5}
+              shadow="md"
+              borderWidth="1px"
+              borderRadius="md"
+              
+            >
+              <Text
+                fontSize="2xl"
+                fontWeight="bold"
+                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                bgClip="text"
+                px={["2px", "2px", "4px", "6px"]}
+              >
+                Stats
+              </Text>
               <HStack
                 justifyContent="space-between"
                 width="100%"
@@ -191,9 +284,14 @@ export default function SocialProfileSimple({ file }) {
                     : 0}
                 </Text>
               </HStack>
-            </Stack>
-          </Box>
-        </HStack>
+            </Box>
+          </Flex>
+        </Stack>
+
+        <Features headingSize="2xl"  headingColorLight="#0DC1E8" headingColorDark="#0DC1E8"/>
+
+        {/* Ad 1 */}
+        {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}
         {/* Ad 2 */}
         {/* <Image src="/images/bottom_ad.jpg" width="100%" my={6} /> */}
       </Stack>
