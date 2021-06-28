@@ -41,11 +41,10 @@ const Feature = ({ title, text, icon }) => {
 
 
 
-export default function SimpleThreeColumns({headingSize, headingColorLight, headingColorDark}) {
-  const headingColor = useColorModeValue (headingColorDark,headingColorLight)
+export default function SimpleThreeColumns({headingSize}) {
   return (
     <Box p={4} py={{ base: 10, md: 20 }} id="features" my={8}>
-      <Heading as={"h2"} size={headingSize} mb={[14, 14, 16, 20]} textAlign="center" color={headingColor}  >
+      <Heading as={"h2"} size={headingSize} mb={[14, 14, 16, 20]} textAlign="center"  >
         Features
       </Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
@@ -74,7 +73,5 @@ export default function SimpleThreeColumns({headingSize, headingColorLight, head
 }
 
 SimpleThreeColumns.defaultProps = {
-  headingSize: "3xl",
-  headingColorLight: "white",
-  headingColorDark: "black"
+  headingSize: "3xl"
 }

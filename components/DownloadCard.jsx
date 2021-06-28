@@ -20,7 +20,16 @@ import fileDescriptionIdentifier from "utils/fileDescriptionIdentifier";
 import fileSizeFormatter from "utils/fileSizeFormatter";
 import copyToClipboard from "utils/copyToClipboard";
 import fileIconIdentifier from "utils/fileIconIdentifier";
-import { FaFacebookF, FaGoogle, FaSpotify, FaDiscord, FaInternetExplorer, FaTwitter, FaYoutube, FaGlobe, } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaGoogle,
+  FaSpotify,
+  FaDiscord,
+  FaInternetExplorer,
+  FaTwitter,
+  FaYoutube,
+  FaGlobe,
+} from "react-icons/fa";
 import { SERVER_URL } from "global/envs";
 import Features from "./layout/Features";
 
@@ -76,8 +85,9 @@ export default function SocialProfileSimple({ file }) {
             <Heading
               fontSize="2xl"
               fontWeight="bold"
-              bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
-              bgClip="text"
+              // color="black"
+              // bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+              // bgClip="text"
               fontFamily={"body"}
               isTruncated
               my={2}
@@ -93,7 +103,7 @@ export default function SocialProfileSimple({ file }) {
             spacing={[2, 2, 4, 4]}
           >
             <Button
-              colorScheme="teal"
+              colorScheme="yellow"
               variant="outline"
               onClick={() => {
                 copyToClipboard(window.location);
@@ -113,21 +123,29 @@ export default function SocialProfileSimple({ file }) {
             {/* Download Button */}
             {downloadPermission ? (
               <Button
-                colorScheme="teal"
+                color="white"
+                bg={useColorModeValue("primary.500", "primary.400")}
                 variant="solid"
                 as={"a"}
                 href={downloadLink}
+                _hover={{
+                  background: "primary.600"
+                }}
               >
                 <Text>Start Download</Text>
               </Button>
             ) : (
               <Button
                 // flex={1}
-                colorScheme="teal"
+                color="white"
+                bg={useColorModeValue("primary.500", "primary.400")}
                 variant="solid"
+                _hover={{
+                  background: "primary.600"
+                }}
                 onClick={() => timerDuration === 5 && setTimer(true)}
               >
-                <Text >
+                <Text>
                   {timerValue === 5
                     ? `Download ${fileSizeFormatter(file.fileSize)}`
                     : timerValue}
@@ -162,24 +180,33 @@ export default function SocialProfileSimple({ file }) {
               <Text
                 fontSize="2xl"
                 fontWeight="bold"
-                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
-                bgClip="text"
+                // bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                // bgClip="text"
               >
                 {fileDescription.heading}
               </Text>
               <Text>{fileDescription.long}</Text>
-              { (file.fileType === "rar" || file.fileType === "zip" || file.fileType === "7z") && <Stack direction="row" spacing={4} mt={8} align="center">
-                 <Link target="_blank" href="https://www.win-rar.com/download.html">
-                 <Button colorScheme="teal" variant="solid">
-                  Download Winrar
-                </Button>
-                </Link>
-              </Stack>
-              }
+              {(file.fileType === "rar" ||
+                file.fileType === "zip" ||
+                file.fileType === "7z") && (
+                <Stack direction="row" spacing={4} mt={8} align="center">
+                  <Link
+                    target="_blank"
+                    href="https://www.win-rar.com/download.html"
+                  >
+                    <Button color="white"
+                bg={useColorModeValue("primary.500", "primary.400")} variant="solid" _hover={{
+                  background: "primary.600"
+                }}>
+                      Download Winrar
+                    </Button>
+                  </Link>
+                </Stack>
+              )}
             </Box>
           </Flex>
         </Stack>
-        
+
         <Stack>
           <Flex
             justifyContent="space-between"
@@ -239,13 +266,12 @@ export default function SocialProfileSimple({ file }) {
               shadow="md"
               borderWidth="1px"
               borderRadius="md"
-              
             >
               <Text
                 fontSize="2xl"
                 fontWeight="bold"
-                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
-                bgClip="text"
+                // bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
+                // bgClip="text"
                 px={["2px", "2px", "4px", "6px"]}
               >
                 Stats
@@ -288,7 +314,9 @@ export default function SocialProfileSimple({ file }) {
           </Flex>
         </Stack>
 
-        <Features headingSize="2xl"  headingColorLight="#0DC1E8" headingColorDark="#0DC1E8"/>
+        <Features
+          headingSize="2xl"
+        />
 
         {/* Ad 1 */}
         {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}
