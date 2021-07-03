@@ -36,9 +36,11 @@ export async function getServerSideProps(context) {
   const res = await fetch(`${SERVER_URL}/S3/objectInfo/${id}`);
 
   const data = await res.json();
+  console.log(data);
   return {
     props: {
-      file: data,
+      file: data.file,
+      user: data.user,
     },
   };
 }

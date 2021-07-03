@@ -129,7 +129,7 @@ export default function SocialProfileSimple({ file }) {
                 as={"a"}
                 href={downloadLink}
                 _hover={{
-                  background: "primary.600"
+                  background: "primary.600",
                 }}
               >
                 <Text>Start Download</Text>
@@ -141,7 +141,7 @@ export default function SocialProfileSimple({ file }) {
                 bg={useColorModeValue("primary.500", "primary.400")}
                 variant="solid"
                 _hover={{
-                  background: "primary.600"
+                  background: "primary.600",
                 }}
                 onClick={() => timerDuration === 5 && setTimer(true)}
               >
@@ -194,10 +194,14 @@ export default function SocialProfileSimple({ file }) {
                     target="_blank"
                     href="https://www.win-rar.com/download.html"
                   >
-                    <Button color="white"
-                bg={useColorModeValue("primary.500", "primary.400")} variant="solid" _hover={{
-                  background: "primary.600"
-                }}>
+                    <Button
+                      color="white"
+                      bg={useColorModeValue("primary.500", "primary.400")}
+                      variant="solid"
+                      _hover={{
+                        background: "primary.600",
+                      }}
+                    >
                       Download Winrar
                     </Button>
                   </Link>
@@ -219,7 +223,7 @@ export default function SocialProfileSimple({ file }) {
             textAlign={"center"}
             flexDirection={["column", "column", "column", "row"]}
           >
-            {/* <Box
+            <Box
               flex="1"
               textAlign="left"
               p={5}
@@ -229,13 +233,12 @@ export default function SocialProfileSimple({ file }) {
               mr={[0, 0, 0, 4]}
               my={[2, 3, 4, 0]}
             >
-              <Text
-                fontSize="2xl"
-                fontWeight="bold"
-                bgGradient="linear(to-r, cyan.400, blue.500, purple.600)"
-                bgClip="text"
-              >
+              <Text fontSize="2xl" fontWeight="bold">
                 Doge User Info
+              </Text>
+              <Text fontSize="md" fontWeight="bold">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam,
+                maxime!
               </Text>
               <HStack
                 justifyContent="space-between"
@@ -252,13 +255,13 @@ export default function SocialProfileSimple({ file }) {
                   boxSize="100px"
                   src="https://i.postimg.cc/Gtk6Lcd3/Profile-Picture-Maker.png"
                 />
-                <Icon as={FaFacebookF} boxSize={["30","30","30", "42"]} />
-                <Icon as={FaTwitter} boxSize={["30","30","30", "42"]} />
-                <Icon as={FaGlobe} boxSize={["30","30","30", "42"]} />
-                <Icon as={FaYoutube} boxSize={["30","30","30", "42"]} />
-                <Icon as={FaDiscord} boxSize={["30","30","30", "42"]} />
+                <Icon as={FaFacebookF} boxSize={["30", "30", "30", "42"]} />
+                <Icon as={FaTwitter} boxSize={["30", "30", "30", "42"]} />
+                <Icon as={FaGlobe} boxSize={["30", "30", "30", "42"]} />
+                <Icon as={FaYoutube} boxSize={["30", "30", "30", "42"]} />
+                <Icon as={FaDiscord} boxSize={["30", "30", "30", "42"]} />
               </HStack>
-            </Box> */}
+            </Box>
             <Box
               flex="1"
               textAlign="left"
@@ -314,9 +317,7 @@ export default function SocialProfileSimple({ file }) {
           </Flex>
         </Stack>
 
-        <Features
-          headingSize="2xl"
-        />
+        <Features headingSize="2xl" />
 
         {/* Ad 1 */}
         {/* <Image src="/images/upper_ad.png" width="100%" my={6} /> */}

@@ -9,7 +9,7 @@ export const APP_URL = isEnvDev
   : "https://app.dogefiles.io";
 
 export const SERVER_URL = isEnvDev
-  ? "http://localhost:5000"
+  ? "https://api.dogefiles.io"
   : "https://api.dogefiles.io";
 
 export const NEXT_PUBLIC_ADSENSE_PUB_ID =
