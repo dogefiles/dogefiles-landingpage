@@ -29,11 +29,12 @@ import {
   FaTwitter,
   FaYoutube,
   FaGlobe,
+  FaTelegram,
 } from "react-icons/fa";
 import { SERVER_URL } from "global/envs";
 import Features from "./layout/Features";
 
-export default function SocialProfileSimple({ file }) {
+export default function SocialProfileSimple({ file, user }) {
   const [timer, setTimer] = useState(false);
   const [downloadPermission, setDownloadPermission] = useState(false);
   const [timerValue, setTimerValue] = useState(5);
@@ -223,45 +224,72 @@ export default function SocialProfileSimple({ file }) {
             textAlign={"center"}
             flexDirection={["column", "column", "column", "row"]}
           >
-            <Box
-              flex="1"
-              textAlign="left"
-              p={5}
-              shadow="md"
-              borderWidth="1px"
-              borderRadius="md"
-              mr={[0, 0, 0, 4]}
-              my={[2, 3, 4, 0]}
-            >
-              <Text fontSize="2xl" fontWeight="bold">
-                Doge User Info
-              </Text>
-              <Text fontSize="md" fontWeight="bold">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam,
-                maxime!
-              </Text>
-              <HStack
-                justifyContent="space-between"
-                width="100%"
-                px={["2px", "2px", "4px", "6px"]}
-                alignItems="center"
+            {user.contactVisibility && (
+              <Box
+                flex="1"
+                textAlign="left"
+                p={5}
+                shadow="md"
+                borderWidth="1px"
+                borderRadius="md"
+                mr={[0, 0, 0, 4]}
+                my={[2, 3, 4, 0]}
               >
-                <Image
-                  alignSelf="center"
-                  mt={2}
-                  borderRadius="full"
-                  backgroundColor="transparent"
-                  boxShadow="lg"
-                  boxSize="100px"
-                  src="https://i.postimg.cc/Gtk6Lcd3/Profile-Picture-Maker.png"
-                />
-                <Icon as={FaFacebookF} boxSize={["30", "30", "30", "42"]} />
-                <Icon as={FaTwitter} boxSize={["30", "30", "30", "42"]} />
-                <Icon as={FaGlobe} boxSize={["30", "30", "30", "42"]} />
-                <Icon as={FaYoutube} boxSize={["30", "30", "30", "42"]} />
-                <Icon as={FaDiscord} boxSize={["30", "30", "30", "42"]} />
-              </HStack>
-            </Box>
+                <Text fontSize="2xl" fontWeight="bold">
+                  {user.displayName}
+                </Text>
+                <Text fontSize="md" fontWeight="bold">
+                  {user.contact.about}
+                </Text>
+                <HStack
+                  justifyContent="space-between"
+                  width="100%"
+                  px={["2px", "2px", "4px", "6px"]}
+                  alignItems="center"
+                >
+                  <Image
+                    alignSelf="center"
+                    mt={2}
+                    borderRadius="full"
+                    backgroundColor="transparent"
+                    boxShadow="lg"
+                    boxSize="100px"
+                    src={user.photoURL}
+                  />
+                  {user.contact.facebook && (
+                    <Link
+                      href={`https://facebook.com/${user.contact.facebook}`}
+                    >
+                      <Icon
+                        as={FaFacebookF}
+                        boxSize={["30", "30", "30", "42"]}
+                      />
+                    </Link>
+                  )}
+                  {user.contact.twitter && (
+                    <Link href={`https://twitter.com/${user.contact.twitter}`}>
+                      <Icon as={FaTwitter} boxSize={["30", "30", "30", "42"]} />
+                    </Link>
+                  )}
+                  {user.contact.discord && (
+                    <Link href={`https://discord.gg/${user.contact.discord}`}>
+                      <Icon as={FaDiscord} boxSize={["30", "30", "30", "42"]} />
+                    </Link>
+                  )}
+                  {/* <Link>
+                    <Icon as={FaGlobe} boxSize={["30", "30", "30", "42"]} />
+                  </Link> */}
+                  {user.contact.telegram && (
+                    <Link href={`https://discord.gg/${user.contact.telegram}`}>
+                      <Icon
+                        as={FaTelegram}
+                        boxSize={["30", "30", "30", "42"]}
+                      />
+                    </Link>
+                  )}
+                </HStack>
+              </Box>
+            )}
             <Box
               flex="1"
               textAlign="left"

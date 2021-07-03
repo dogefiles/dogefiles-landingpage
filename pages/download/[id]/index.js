@@ -4,7 +4,7 @@ import Page from "components/layout/Page";
 import nameFormatter from "utils/nameFormatter";
 import { SERVER_URL } from "global/envs";
 
-export default function download({ file }) {
+export default function download({ file, user }) {
   const fileName = file.fileName && nameFormatter(file.fileName);
 
   return (
@@ -19,7 +19,7 @@ export default function download({ file }) {
         <Flex py={[1, 2, 2, 6]}>
           {/* <Image src="/images/side_ad.jpg" /> */}
           {file && file.fileName ? (
-            <DownloadCard file={file} />
+            <DownloadCard file={file} user={user} />
           ) : (
             <Heading my="auto">The download link does not exists</Heading>
           )}
@@ -36,7 +36,6 @@ export async function getServerSideProps(context) {
   const res = await fetch(`${SERVER_URL}/S3/objectInfo/${id}`);
 
   const data = await res.json();
-  console.log(data);
   return {
     props: {
       file: data.file,
