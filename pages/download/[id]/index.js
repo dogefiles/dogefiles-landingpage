@@ -15,6 +15,7 @@ export default function download({ file, user }) {
         title={`${
           file.fileName ? fileName : "File does not exists"
         } - Dogefiles`}
+        index={false}
       >
         <Flex py={[1, 2, 2, 6]}>
           {/* <Image src="/images/side_ad.jpg" /> */}

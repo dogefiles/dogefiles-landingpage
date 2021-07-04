@@ -12,6 +12,7 @@ const Page = ({
   title = "Secure cloud storage for everyone - Dogefiles",
   keywords = "best cloud storage, free cloud storage, dogefiles, 50gb cloud storage",
   router,
+  index = true,
 }) => {
   const domain = "https://dogefiles.io";
   const formattedTitle = titleStyle(title);
@@ -28,13 +29,17 @@ const Page = ({
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content={description} name="description" />
         <meta content={keywords} name="keywords" />
-        <meta content="follow, index" name="robots" />
+        <meta
+          content={index ? "index, follow" : "noindex, nofollow"}
+          name="robots"
+        />
         <meta content="#ffffff" name="theme-color" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta
           content="/favicons/browserconfig.xml"
           name="msapplication-config"
         />
+        <link rel="alternate" href={domain} hreflang="en-us" />
         <link
           href="/favicons/apple-touch-icon.png"
           rel="apple-touch-icon"
