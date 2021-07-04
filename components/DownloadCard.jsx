@@ -37,13 +37,13 @@ import Features from "./layout/Features";
 export default function SocialProfileSimple({ file, user }) {
   const [timer, setTimer] = useState(false);
   const [downloadPermission, setDownloadPermission] = useState(false);
-  const [timerValue, setTimerValue] = useState(20);
+  const [timerValue, setTimerValue] = useState(10);
   const [downloadLink, setDownloadLink] = useState(null);
   const fileName = file.fileName && nameFormatter(file.fileName);
   const fileDescription = fileDescriptionIdentifier(file.fileType);
   const toast = useToast();
 
-  let timerDuration = 20;
+  let timerDuration = 10;
   useEffect(() => {
     if (!timer) return;
     const downloadTimer = setInterval(() => {
@@ -144,10 +144,10 @@ export default function SocialProfileSimple({ file, user }) {
                 _hover={{
                   background: "primary.600",
                 }}
-                onClick={() => timerDuration === 20 && setTimer(true)}
+                onClick={() => timerDuration === 10 && setTimer(true)}
               >
                 <Text>
-                  {timerValue === 20
+                  {timerValue === 10
                     ? `Download ${fileSizeFormatter(file.fileSize)}`
                     : `Wait ${timerValue}`}
                 </Text>
