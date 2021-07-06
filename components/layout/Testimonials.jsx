@@ -172,9 +172,9 @@ export default function GridBlurredBackdrop() {
         >
           See why over{" "}
           <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
-            150,000+
+            thousands
           </chakra.strong>{" "}
-          people use Dogefiles as thier cloud ☁
+          of people use Dogefiles as thier cloud ☁
         </chakra.h2>
       </Box>
       <SimpleGrid
