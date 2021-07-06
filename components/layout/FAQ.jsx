@@ -32,7 +32,26 @@ const Faq = () => {
             </AccordionButton>
           </Heading>
           <AccordionPanel pb={4}>
-            The maximum file upload size is 100MB.
+            The maximum file upload size is 200MB.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem>
+          <Heading as="h5" size="sm">
+            <AccordionButton>
+              <Box flex="1" textAlign="left">
+                What users should be strictly aware of while uploading data to
+                Dogefiles?
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+          </Heading>
+          <AccordionPanel pb={4}>
+            Dogefiles does not allow its users to upload any copyright content
+            as mentioned in our terms of service. As its not possible for us to
+            detect that with an automated software so we will suspend the user
+            account if we get a report from the copyright owner or someone who
+            is eligible on the behalf of copyright owner.
           </AccordionPanel>
         </AccordionItem>
 
@@ -49,6 +68,7 @@ const Faq = () => {
             The free users can get upto 20GB.
           </AccordionPanel>
         </AccordionItem>
+
         <AccordionItem>
           <Heading as="h5" size="sm">
             <AccordionButton>
