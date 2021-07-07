@@ -39,7 +39,7 @@ const Page = ({
           content="/favicons/browserconfig.xml"
           name="msapplication-config"
         />
-        <link rel="alternate" href={domain} hreflang="en-us" />
+        <link rel="alternate" href={domain} hrefLang="en-us" />
         <link
           href="/favicons/apple-touch-icon.png"
           rel="apple-touch-icon"

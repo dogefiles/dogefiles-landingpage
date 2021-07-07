@@ -75,7 +75,7 @@ export default function CallToActionWithVideo() {
                 Get started
               </Button>
             </NextLink>
-            <Button
+            {/* <Button
               rounded={"full"}
               size={"lg"}
               fontWeight={"normal"}
@@ -83,7 +83,7 @@ export default function CallToActionWithVideo() {
               leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
             >
               How It Works
-            </Button>
+            </Button> */}
           </Stack>
         </Stack>
         <Flex
