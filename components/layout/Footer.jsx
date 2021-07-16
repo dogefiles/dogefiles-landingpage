@@ -118,8 +118,7 @@ export default function LargeWithNewsletter() {
             <ListHeader>Support</ListHeader>
             <Link href={"/contact-us"}>Contact us</Link>
             <Link href={"/terms-of-service"}>Terms of Service</Link>
-            {/* <Link href={"#"}>Legal</Link> */}
-            {/* <Link href={"#"}>Satus</Link> */}
+            <Link href={"/dmca"}>DMCA</Link>
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
