@@ -21,9 +21,10 @@ export default function terms_of_service() {
       <Text>
         We are stictly against copyright material and to report copyright
         infringement email us at{" "}
-        <Link href="mailto:dmca.dogefiles@gmail.com" color="blue">
-          dmca.dogefiles@gmail.com
-        </Link>
+        <Link href="mailto:info.dogefiles@gmail.com" color="blue">
+          info.dogefiles@gmail.com
+        </Link>{" "}
+        with a subject "Copyright"
       </Text>
       <Text>Please allow us upto 3 days or sometimes a week to process.</Text>
     </Page>
