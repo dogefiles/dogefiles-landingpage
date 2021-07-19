@@ -23,6 +23,7 @@ export default async (req, res) => {
       "blog",
       "privacy-policy",
       "terms-of-service",
+      "dmca",
     ];
     pages.map(url => {
       links.push({
