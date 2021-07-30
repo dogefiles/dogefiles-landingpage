@@ -33,9 +33,10 @@ export default function ThreeTierPricing() {
   return (
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
-        <Heading as="h1" fontSize="4xl">
+        <Heading as={"h2"} size="3xl" mb={[4, 4, 6, 8]} textAlign="center">
           Plans that fit your need
         </Heading>
+        
         <Text fontSize="lg" color={"gray.500"}>
           Start with 14-day free trial. No credit card needed. Cancel at
           anytime.
@@ -58,7 +59,7 @@ export default function ThreeTierPricing() {
                 $
               </Text>
               <Text fontSize="5xl" fontWeight="900">
-                79
+                2
               </Text>
               <Text fontSize="3xl" color="gray.500">
                 /month
@@ -71,17 +72,17 @@ export default function ThreeTierPricing() {
             borderBottomRadius={"xl"}
           >
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
+              {/* <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
                 unlimited build minutes
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
                 Lorem, ipsum dolor.
-              </ListItem>
+              </ListItem> */}
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                20GB Storage
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
@@ -91,7 +92,8 @@ export default function ThreeTierPricing() {
                 _hover={{ bg: "primary.400" }}
                 variant="outline"
               >
-                Start trial
+                {/* Start trial */}
+                Coming Soon 
               </Button>
             </Box>
           </VStack>
@@ -105,7 +107,7 @@ export default function ThreeTierPricing() {
               left="50%"
               style={{ transform: "translate(-50%)" }}
             >
-              <Text
+              {/* <Text
                 textTransform="uppercase"
                 bg={useColorModeValue("primary.300", "primary.600")}
                 px={3}
@@ -116,7 +118,7 @@ export default function ThreeTierPricing() {
                 rounded="xl"
               >
                 Most Popular
-              </Text>
+              </Text> */}
             </Box>
             <Box py={4} px={12}>
               <Text fontWeight="500" fontSize="2xl">
@@ -127,7 +129,7 @@ export default function ThreeTierPricing() {
                   $
                 </Text>
                 <Text fontSize="5xl" fontWeight="900">
-                  149
+                  5
                 </Text>
                 <Text fontSize="3xl" color="gray.500">
                   /month
@@ -140,7 +142,7 @@ export default function ThreeTierPricing() {
               borderBottomRadius={"xl"}
             >
               <List spacing={3} textAlign="start" px={12}>
-                <ListItem>
+                {/* <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
                   unlimited build minutes
                 </ListItem>
@@ -155,10 +157,10 @@ export default function ThreeTierPricing() {
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
                   5TB Lorem, ipsum dolor.
-                </ListItem>
+                </ListItem> */}
                 <ListItem>
                   <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
+                  50GB Storage
                 </ListItem>
               </List>
               <Box w="80%" pt={7}>
@@ -167,7 +169,7 @@ export default function ThreeTierPricing() {
                   bg="primary.400"
                   _hover={{ bg: "primary.500" }}
                 >
-                  Start trial
+                  Coming Soon
                 </Button>
               </Box>
             </VStack>
@@ -183,7 +185,7 @@ export default function ThreeTierPricing() {
                 $
               </Text>
               <Text fontSize="5xl" fontWeight="900">
-                349
+                10
               </Text>
               <Text fontSize="3xl" color="gray.500">
                 /month
@@ -196,17 +198,17 @@ export default function ThreeTierPricing() {
             borderBottomRadius={"xl"}
           >
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
+              {/* <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
                 unlimited build minutes
               </ListItem>
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
                 Lorem, ipsum dolor.
-              </ListItem>
+              </ListItem> */}
               <ListItem>
                 <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                100GB Storage
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
@@ -216,7 +218,7 @@ export default function ThreeTierPricing() {
                 _hover={{ bg: "primary.400" }}
                 variant="outline"
               >
-                Start trial
+                Coming Soon
               </Button>
             </Box>
           </VStack>
