@@ -8,7 +8,7 @@ import Faq from "components/layout/FAQ";
 import { BLOG_URL, CONTENT_API_KEY } from "global/envs";
 import PostCard from "components/PostCard";
 
-export default function Home({posts}) {
+export default function Home() {
   return (
     <>
       <Page
@@ -22,7 +22,7 @@ export default function Home({posts}) {
           {/* <Pricing />  We don't need it yet */}
           <Pricing />
           {/* Blog */}
-          <Heading as={"h2"} size="3xl" mb={[4, 4, 6, 8]} textAlign="center">Recent Blogs</Heading>
+          {/* <Heading as={"h2"} size="3xl" mb={[4, 4, 6, 8]} textAlign="center">Recent Blogs</Heading>
           <Grid
             templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]}
             gap={6}
@@ -30,7 +30,7 @@ export default function Home({posts}) {
             {posts.posts.slice(0, 6).map(post => (
               <PostCard key={post.id} post={post} />
             ))}
-          </Grid>
+          </Grid> */}
           <Faq />
         </Box>
       </Page>
@@ -38,24 +38,24 @@ export default function Home({posts}) {
   );
 }
 
-export const getStaticProps = async context => {
-  const contentApiKey = CONTENT_API_KEY;
-  const blogUrl = BLOG_URL;
+// export const getStaticProps = async context => {
+//   const contentApiKey = CONTENT_API_KEY;
+//   const blogUrl = BLOG_URL;
 
-  const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
-  );
+//   const res = await fetch(
+//     `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
+//   );
 
-  let posts = await res.json();
+//   let posts = await res.json();
 
-  if (posts.errors) {
-    console.log("There was an error");
-    posts = { posts: [], meta: {}, error: true };
-  }
+//   if (posts.errors) {
+//     console.log("There was an error");
+//     posts = { posts: [], meta: {}, error: true };
+//   }
 
-  return {
-    props: {
-      posts,
-    },
-  };
-};
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// };
