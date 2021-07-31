@@ -110,7 +110,7 @@ export default function CallToActionWithVideo() {
             width={"full"}
             overflow={"hidden"}
           >
-            <IconButton
+            {/* <IconButton
               aria-label={"Play Button"}
               variant={"ghost"}
               _hover={{ bg: "transparent" }}
@@ -122,7 +122,7 @@ export default function CallToActionWithVideo() {
               top={"50%"}
               transform={"translateX(-50%) translateY(-50%)"}
               // zIndex="1"
-            />
+            /> */}
             <Image
               alt={"Hero Image"}
               fit={"cover"}
