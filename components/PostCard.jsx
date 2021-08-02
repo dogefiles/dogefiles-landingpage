@@ -1,10 +1,11 @@
-import { Box, Badge, Image } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box, Badge, Image, Link } from "@chakra-ui/react";
+// import NextLink from "next/link";
 import NextImage from "next/image";
 
 export default function PostCard({ post }) {
   return (
-    <NextLink href={`/${post.slug}`}>
+    // <NextLink href={`/${post.slug}`}>
+    <Link href={`/${post.slug}`}>
       <Box
         maxW="sm"
         borderWidth="1px"
@@ -42,6 +43,7 @@ export default function PostCard({ post }) {
           </Box>
         </Box>
       </Box>
-    </NextLink>
+    </Link>
+    // </NextLink>
   );
 }
