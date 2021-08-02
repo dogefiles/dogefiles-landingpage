@@ -99,12 +99,12 @@ export default function LargeWithNewsletter() {
               >
                 <FaTwitter />
               </SocialButton>
-              <SocialButton label={"YouTube"} href={"#"}>
+              {/* <SocialButton label={"YouTube"} href={"#"}>
                 <FaYoutube />
               </SocialButton>
               <SocialButton label={"Instagram"} href={"#"}>
                 <FaInstagram />
-              </SocialButton>
+              </SocialButton> */}
             </Stack>
           </Stack>
           <Stack align={"flex-start"}>
