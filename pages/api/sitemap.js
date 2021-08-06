@@ -17,7 +17,6 @@ export default async (req, res) => {
 
     // Add other pages
     const pages = [
-      "careers",
       "contact-us",
       "about-us",
       "blog",
