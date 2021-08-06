@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 
 const content = async () => {
   const res = await fetch(
-    "https://ghost-dogefiles.herokuapp.com/ghost/api/v3/content/posts/?key=284a7bfa595c1137a327109d5d"
+    "https://ghost-dogefiles.herokuapp.com/ghost/api/v3/content/posts/?key=284a7bfa595c1137a327109d5d&limit=all"
   );
   const { posts } = await res.json();
   const slugs = posts.map(post => post.slug);
