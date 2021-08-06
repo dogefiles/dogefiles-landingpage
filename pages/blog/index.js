@@ -3,7 +3,6 @@ import Page from "components/layout/Page";
 import { BLOG_URL, CONTENT_API_KEY } from "global/envs";
 import PostCard from "components/PostCard";
 
-
 export default function blog({ posts }) {
   return (
     <Page
@@ -38,7 +37,7 @@ export const getStaticProps = async context => {
   const blogUrl = BLOG_URL;
 
   const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
+    `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}&limit=all`
   );
 
   let posts = await res.json();
