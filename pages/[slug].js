@@ -89,7 +89,7 @@ export const getStaticProps = async context => {
   const contentApiKey = CONTENT_API_KEY;
   const blogUrl = BLOG_URL;
   const res = await fetch(
-    `${blogUrl}/ghost/api/v3/content/posts/slug/${context.params.slug}/?key=${contentApiKey}`
+    `${blogUrl}/ghost/api/v3/content/posts/slug/${context.params.slug}/?key=${contentApiKey}&limit=all`
   );
 
   const data = await res.json();
@@ -106,7 +106,7 @@ export const getStaticPaths = async () => {
   const blogUrl = BLOG_URL;
   try {
     const res = await fetch(
-      `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}`
+      `${blogUrl}/ghost/api/v3/content/posts/?key=${contentApiKey}&limit=all`
     );
 
     const posts = await res.json();
