@@ -1,5 +1,13 @@
 [
   {
+    "id": "610ea4f5bc7b9c001c7f5027",
+    "slug": "fundamentals-of-os",
+    "title": "Fundamental Concepts of Operating Systems",
+    "feature_image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fEMlMjBQcm9ncmFtbWluZ3xlbnwwfHx8fDE2MjgzNTAyMjU&ixlib=rb-1.2.1&q=80&w=2000",
+    "reading_time": 5,
+    "updated_at": "2021-08-07T21:01:17.000+05:30"
+  },
+  {
     "id": "610c008065a785001c836ab4",
     "slug": "beginner-guide-to-os",
     "title": "A beginner guide to Operating Systems",
@@ -38,13 +46,5 @@
     "feature_image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDExfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50fGVufDB8fHx8MTYyNzIyODkzMw&ixlib=rb-1.2.1&q=80&w=2000",
     "reading_time": 2,
     "updated_at": "2021-07-25T21:34:01.000+05:30"
-  },
-  {
-    "id": "60fc0f8b72185d001c2acda1",
-    "slug": "game-development",
-    "title": "How to become a Game Developer?",
-    "feature_image": "https://images.unsplash.com/photo-1556438064-2d7646166914?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGdhbWUlMjBkZXZlbG9wbWVudHxlbnwwfHx8fDE2MjcxNDIzMDk&ixlib=rb-1.2.1&q=80&w=2000",
-    "reading_time": 3,
-    "updated_at": "2021-07-25T21:33:50.000+05:30"
   }
 ]
