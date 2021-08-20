@@ -1,5 +1,5 @@
 import { Heading, Grid } from "@chakra-ui/react";
-import posts from "./dummyPosts.json";
+// import posts from "./dummyPosts.json";
 import PostCard from "components/PostCard";
 
 // const getBasicInfo = blogs =>

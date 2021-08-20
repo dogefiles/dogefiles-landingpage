@@ -20,8 +20,6 @@ export default function Home() {
           <Testimonials />
           {/* <Pricing />  We don't need it yet */}
           <Pricing />
-          {/* Blog */}
-          <BlogSection />
           <Faq />
         </Box>
       </Page>
