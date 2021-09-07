@@ -48,6 +48,7 @@ export async function getServerSideProps({ params }) {
       data = null;
     }
   } catch (err) {
+    errorCode = 500;
     data = null;
   }
 
