@@ -1,6 +1,0 @@
-app:
-  - redirects:
-      - from: /_next/*
-        cdn: true
-      - ext: js,css,ico,png,jpg,svg,txt
-        cdn: true

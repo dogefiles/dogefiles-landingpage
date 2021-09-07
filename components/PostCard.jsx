@@ -15,13 +15,13 @@ export default function PostCard({ post }) {
       onClick={() => router.push(`/${post.slug}`)}
     >
       {post?.feature_image && (
-        <Image src={post.feature_image} alt={post.title} />
-        // <NextImage
-        //   src={post.feature_image}
-        //   alt={post.title}
-        //   width="1024px"
-        //   height="768px"
-        // />
+        // <Image src={post.feature_image} alt={post.title} />
+        <NextImage
+          src={post.feature_image}
+          alt={post.title}
+          width="1024px"
+          height="768px"
+        />
       )}
 
       <Box p="6">

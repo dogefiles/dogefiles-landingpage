@@ -123,7 +123,7 @@ export default function CallToActionWithVideo() {
               transform={"translateX(-50%) translateY(-50%)"}
               // zIndex="1"
             /> */}
-            <Image
+            {/* <Image
               alt={"Hero Image"}
               fit={"cover"}
               align={"center"}
@@ -137,11 +137,12 @@ export default function CallToActionWithVideo() {
                   ? "/images/dashboard_light.png"
                   : "/images/dashboard_dark.png"
               }
-            />
-            {/* <NextImage
+            /> */}
+            <NextImage
               alt={"Hero Image"}
-              width={"1366px"}
-              height={"768px"}
+              // width={"1366px"}
+              // height={"768px"}
+              layout="fill"
               // src={
               //   "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               // }
@@ -150,7 +151,7 @@ export default function CallToActionWithVideo() {
                   ? "/images/dashboard_light.png"
                   : "/images/dashboard_dark.png"
               }
-            /> */}
+            />
           </Box>
         </Flex>
       </Stack>
