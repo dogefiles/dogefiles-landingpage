@@ -335,11 +335,7 @@ export default function SocialProfileSimple({ file, user }) {
               >
                 {/* <Icon as={BsDownload} boxSize={5} color="green" /> */}
                 <Text>Downloads</Text>
-                <Text>
-                  {file.downloads && file.downloads.length > 0
-                    ? file.downloads.length
-                    : 0}
-                </Text>
+                <Text>{file.downloads ? file.downloads : 0}</Text>
               </HStack>
             </Box>
           </Flex>
