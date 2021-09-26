@@ -337,10 +337,10 @@ const NAV_ITEMS = [
     label: "Testimonials",
     href: "/#testimonials",
   },
-  {
-    label: "Blog",
-    href: "/blog",
-  },
+  // {
+  //   label: "Blog",
+  //   href: "/blog",
+  // },
   {
     label: "FAQ",
     href: "/#faq",

@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node utils/download-posts-slug.js && next build",
-    "start": "node utils/download-posts-slug.js && next start",
+    "build-old": "node utils/download-posts-slug.js && next build",
+    "start-old": "node utils/download-posts-slug.js && next start",
+    "build": "node next build",
+    "start": "node next start",
     "download-posts-slug": "node utils/download-posts-slug.js"
   },
   "dependencies": {

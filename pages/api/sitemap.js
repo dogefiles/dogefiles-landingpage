@@ -1,4 +1,4 @@
-import posts_slug from "public/posts-slug.json";
+// import posts_slug from "public/posts-slug.json";
 import { HOST_URL } from "global/envs";
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
@@ -7,13 +7,13 @@ export default async (req, res) => {
   try {
     // An array with your links
     const links = [];
-    posts_slug.map(slug => {
-      links.push({
-        url: `${HOST_URL}/${slug}`,
-        changefreq: "weekly",
-        priority: 0.9,
-      });
-    });
+    // posts_slug.map(slug => {
+    //   links.push({
+    //     url: `${HOST_URL}/${slug}`,
+    //     changefreq: "weekly",
+    //     priority: 0.9,
+    //   });
+    // });
 
     // Add other pages
     const pages = [
