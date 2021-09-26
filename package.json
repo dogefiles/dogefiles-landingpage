@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build-old": "node utils/download-posts-slug.js && next build",
     "start-old": "node utils/download-posts-slug.js && next start",
-    "build": "node next build",
-    "start": "node next start",
+    "build": "next build",
+    "start": "next start",
     "download-posts-slug": "node utils/download-posts-slug.js"
   },
   "dependencies": {
