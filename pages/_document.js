@@ -14,6 +14,14 @@ class MyDocument extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          {/* Infolinks Script */}
+          <script type="text/javascript">
+            var infolinks_pid = 3355496; var infolinks_wsid = 0;
+          </script>
+          <script
+            type="text/javascript"
+            src="//resources.infolinks.com/js/infolinks_main.js"
+          ></script>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             data-ad-client={`${NEXT_PUBLIC_ADSENSE_PUB_ID}`}
