@@ -4,7 +4,7 @@ import Page from "components/layout/Page";
 import nameFormatter from "utils/nameFormatter";
 import { SERVER_URL } from "global/envs";
 import Error from "next/error";
-import Script from "next/script";
+import Head from "next/head";
 
 export default function download({ errorCode, data }) {
   if (errorCode !== 200) return <Error statusCode={errorCode} />;
@@ -22,15 +22,17 @@ export default function download({ errorCode, data }) {
         } - Dogefiles`}
         index={false}
       >
-        <Script
-          data-cfasync="false"
-          src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948540"
-        />
-        <Script
-          data-cfasync="false"
-          src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948543"
-        />
-        <Script data-cfasync="false" src="/sw.js" />
+        <Head>
+          <script
+            data-cfasync="false"
+            src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948540"
+          ></script>
+          <script
+            data-cfasync="false"
+            src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948543"
+          ></script>
+          <script data-cfasync="false" src="/sw.js"></script>
+        </Head>
         <Flex py={[1, 2, 2, 6]}>
           {/* <Image src="/images/side_ad.jpg" /> */}
           {file && file.fileName ? (
