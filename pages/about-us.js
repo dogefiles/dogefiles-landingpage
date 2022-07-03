@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <Page
       description={
-        "Dogefiles is a free file uploading site where you can upload and download file at super high speed, backup your photos, files, and earn money."
+        "Dogefiles is a free file uploading site where you can upload and download file at super high speed, backup your photos and files."
       }
       image={"/images/Dogefiles.png"}
       title={"About Us - Dogefiles"}
@@ -37,7 +37,8 @@ const AboutUs = () => {
             </Heading>
 
             <Text mt={4} align="left">
-              We offer 20 GB of cloud storage to every free user ✌
+              We offer unlimited cloud storage to every user with max file size
+              of 200MB✌
             </Text>
           </Box>
         </Box>
@@ -94,8 +95,8 @@ const AboutUs = () => {
               Support
             </Heading>
             <Text mt={4} align="left">
-              We have 24/7 live support wheter it is summer or winter our
-              support team is always ready to help 🌟
+              We have 24/7 live support on our discord server wheter it is
+              summer or winter our support team is always ready to help 🌟
             </Text>
           </Box>
         </Box>

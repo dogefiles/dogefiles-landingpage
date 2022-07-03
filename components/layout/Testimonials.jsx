@@ -14,7 +14,7 @@ const testimonials = [
     name: "Brandon P.",
     role: "Chief Marketing Officer",
     content:
-      "Dogefiles is one of the best cloud storage services around, It has a free tier, is competitively priced, has very strong security, and is mostly very easy to use as well.",
+      "Dogefiles is one of the best cloud storage services around, It is completely free and have very strong security, and is mostly very easy to use as well.",
     avatar:
       "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
   },

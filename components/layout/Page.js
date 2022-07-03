@@ -7,10 +7,10 @@ import titleStyle from "utils/title-style";
 const Page = ({
   children,
   date,
-  description = "Upload and Download files for free upto 50 GB for free user, You can keep your files as long as you want, Safest and fastest way to upload.",
+  description = "Upload and Download files for free, You can keep your files as long as you want, Safest and fastest way to upload.",
   image,
-  title = "Secure cloud storage for everyone - Dogefiles",
-  keywords = "best cloud storage, free cloud storage, dogefiles, 50gb cloud storage",
+  title = "Free Unlimited Cloud Storage For Everyone - Dogefiles",
+  keywords = "best cloud storage, free cloud storage, dogefiles, unlimited cloud storage",
   router,
   index = true,
 }) => {

@@ -51,7 +51,7 @@ export default function SimpleThreeColumns({headingSize}) {
         <Feature
           icon={<Icon as={FiCloud} w={10} h={10} />}
           title={"Unlimited Uploads"}
-          text={"Signup today and enjoy free cloud storage upto 20 GB ✌"}
+          text={"Signup today and enjoy free unlimited cloud storage ✌"}
         />
         <Feature
           icon={<Icon as={FiDownloadCloud} w={10} h={10} />}

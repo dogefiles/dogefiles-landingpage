@@ -59,13 +59,13 @@ const Faq = () => {
           <Heading as="h5" size="sm">
             <AccordionButton>
               <Box flex="1" textAlign="left">
-                How much storage a free user get?
+                How much storage a user get?
               </Box>
               <AccordionIcon />
             </AccordionButton>
           </Heading>
           <AccordionPanel pb={4}>
-            The free users can get upto 20GB.
+            Every user gets unlimited storage with a max file size of 200MB.
           </AccordionPanel>
         </AccordionItem>
 

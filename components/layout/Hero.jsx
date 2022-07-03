@@ -35,7 +35,7 @@ export default function CallToActionWithVideo() {
             <Text
               as={"span"}
               position={"relative"}
-              fontSize={{ base: "50px", sm: "80px" }}
+              fontSize={{ sm: "30px", md: "40px", lg: "65px" }}
               // _after={{
               //   content: "''",
               //   width: "full",
@@ -47,7 +47,7 @@ export default function CallToActionWithVideo() {
               //   zIndex: -1,
               // }}
             >
-              Secure Cloud Storage
+              Free Unlimited Cloud Storage
             </Text>
             <br />
             <Text as={"span"} color={"primary.400"}>
@@ -55,8 +55,8 @@ export default function CallToActionWithVideo() {
             </Text>
           </Heading>
           <Text color={"gray.500"}>
-            Create a free Dogefiles account and get upto <strong>20GB</strong>{" "}
-            free. We are here to spread joy among every individual.
+            Sign Up today on Dogefiles and get free <strong>unlimited</strong>{" "}
+            cloud storage. We are here to serve our best to everyone 🙋
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}

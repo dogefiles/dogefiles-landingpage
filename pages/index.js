@@ -19,7 +19,7 @@ export default function Home() {
           <Features />
           <Testimonials />
           {/* <Pricing />  We don't need it yet */}
-          <Pricing />
+          {/* <Pricing /> */}
           <Faq />
         </Box>
       </Page>
