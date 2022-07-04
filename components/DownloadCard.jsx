@@ -66,7 +66,7 @@ export default function SocialProfileSimple({ file, user }) {
 
   return (
     <>
-      <Stack mx={[2, 2, 4, 6]} flex="2" width={["20%", "25%", "40%"]}>
+      <Stack mx={[2, 2, 4, 6]} flex="2" width={"100%"}>
         <Flex
           justifyContent="space-between"
           w={"full"}

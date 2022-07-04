@@ -40,8 +40,22 @@ export default function download({ errorCode, data }) {
             src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948543"
           ></script>
         </Head>
-        <Flex py={[1, 2, 2, 6]}>
+        <Flex py={[1, 2, 2, 6]} flexDir="column">
           {/* <Image src="/images/side_ad.jpg" /> */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+          atOptions = {
+            'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+          document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
+          `,
+            }}
+          />
           {file && file.fileName ? (
             <DownloadCard file={file} user={user} />
           ) : (
