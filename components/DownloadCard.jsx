@@ -155,7 +155,46 @@ export default function SocialProfileSimple({ file, user }) {
             )}
           </Stack>
         </Flex>
+        <Flex
+            flexDir={"column"}
+            justifyContent="center"
+            alignItems={"center"}
+            my="8"         
+            width={["100%"]}
+          >
+            <Flex width={["100%", "100%","80%", "50%"]}>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `
+          atOptions = {
+            'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+          document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
+          `,
+              }}
+            />
 
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `atOptions = {
+		'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
+              }}
+            ></script>
+
+</Flex>
+          </Flex>
         <Stack>
           <Circle
             position="absolute"
@@ -211,11 +250,50 @@ export default function SocialProfileSimple({ file, user }) {
             </Box>
           </Flex>
         </Stack>
+        <Flex
+            flexDir={"column"}
+            justifyContent="center"
+            alignItems={"center"}
+            my="8"         
+            width={["100%"]}
+          >
+            <Flex width={["100%", "100%","80%", "50%"]}>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `
+          atOptions = {
+            'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+          document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
+          `,
+              }}
+            />
 
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `atOptions = {
+		'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
+              }}
+            ></script>
+
+</Flex>
+          </Flex>
         <Stack>
           <Flex
             justifyContent="space-between"
-            mt={10}
+            // mt={10}
             w={"full"}
             bg={useColorModeValue("white", "gray.900")}
             boxShadow={"xl"}
@@ -340,6 +418,47 @@ export default function SocialProfileSimple({ file, user }) {
             </Box>
           </Flex>
         </Stack>
+        
+        <Flex
+            flexDir={"column"}
+            justifyContent="center"
+            alignItems={"center"}
+            my="8"         
+            width={["100%"]}
+          >
+            <Flex width={["100%", "100%","80%", "50%"]}>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `
+          atOptions = {
+            'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+          document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
+          `,
+              }}
+            />
+
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{
+                __html: `atOptions = {
+		'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
+              }}
+            ></script>
+
+</Flex>
+          </Flex>
 
         <Features headingSize="2xl" />
 

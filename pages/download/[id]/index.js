@@ -42,9 +42,18 @@ export default function download({ errorCode, data }) {
         </Head>
         <Flex py={[1, 2, 2, 6]} flexDir="column">
           {/* <Image src="/images/side_ad.jpg" /> */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+          <Flex
+            flexDir={"column"}
+            justifyContent="center"
+            alignItems={"center"}
+            mb="6"
+            width={["100%"]}
+          >
+            <Flex width={["100%", "100%", "80%", "50%"]}>
+              <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `
           atOptions = {
             'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
             'format' : 'iframe',
@@ -54,14 +63,29 @@ export default function download({ errorCode, data }) {
           };
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
-            }}
-          />
+                }}
+              />
+
+              <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{
+                  __html: `atOptions = {
+		'key' : 'e4176cde5c7a653fe9b1c6dea79cdc6d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
+                }}
+              ></script>
+            </Flex>
+          </Flex>
           {file && file.fileName ? (
             <DownloadCard file={file} user={user} />
           ) : (
             <Heading my="auto">The download link does not exists</Heading>
           )}
-
           {/* <Image src="/images/side_ad.jpg" /> */}
         </Flex>
       </Page>
