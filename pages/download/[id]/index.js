@@ -35,10 +35,11 @@ export default function download({ errorCode, data }) {
             data-cfasync="false"
             src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948540"
           ></script> */}
-          <script
+          {/* Native Ads */}
+          {/* <script
             data-cfasync="false"
             src="//dw55pg05c2rl5.cloudfront.net/?cgpwd=948543"
-          ></script>
+          ></script> */}
         </Head>
         <Flex py={[1, 2, 2, 6]} flexDir="column">
           {/* <Image src="/images/side_ad.jpg" /> */}
