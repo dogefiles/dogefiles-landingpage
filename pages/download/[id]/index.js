@@ -24,11 +24,11 @@ export default function download({ errorCode, data }) {
       >
         <Head>
           {/* New pop */}
-          <script
+          {/* <script
             data-cfasync="false"
             src="//dba9ytko5p72r.cloudfront.net/?tyabd=948540"
-          ></script>
-          <script data-cfasync="false" src="/pop.js"></script>
+          ></script> */}
+          {/* <script data-cfasync="false" src="/pop.js"></script> */}
 
           {/* old pop */}
           {/* <script
@@ -43,7 +43,7 @@ export default function download({ errorCode, data }) {
         </Head>
         <Flex py={[1, 2, 2, 6]} flexDir="column">
           {/* <Image src="/images/side_ad.jpg" /> */}
-          <Flex
+          {/* <Flex
             flexDir={"column"}
             justifyContent="center"
             alignItems={"center"}
@@ -81,7 +81,7 @@ export default function download({ errorCode, data }) {
                 }}
               ></script>
             </Flex>
-          </Flex>
+          </Flex> */}
           {file && file.fileName ? (
             <DownloadCard file={file} user={user} />
           ) : (
