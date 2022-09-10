@@ -162,7 +162,7 @@ export default function SocialProfileSimple({ file, user }) {
             my="8"         
             width={["100%"]}
           >
-            <Flex width={["100%", "100%","80%", "50%"]}>
+            {/* <Flex width={["100%", "100%","80%", "50%"]}>
             <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
@@ -193,7 +193,7 @@ export default function SocialProfileSimple({ file, user }) {
               }}
             ></script>
 
-</Flex>
+</Flex> */}
           </Flex>
         <Stack>
           <Circle
@@ -257,7 +257,7 @@ export default function SocialProfileSimple({ file, user }) {
             my="8"         
             width={["100%"]}
           >
-            <Flex width={["100%", "100%","80%", "50%"]}>
+            {/* <Flex width={["100%", "100%","80%", "50%"]}>
             <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
@@ -288,7 +288,7 @@ export default function SocialProfileSimple({ file, user }) {
               }}
             ></script>
 
-</Flex>
+</Flex> */}
           </Flex>
         <Stack>
           <Flex
@@ -426,7 +426,7 @@ export default function SocialProfileSimple({ file, user }) {
             my="8"         
             width={["100%"]}
           >
-            <Flex width={["100%", "100%","80%", "50%"]}>
+            {/* <Flex width={["100%", "100%","80%", "50%"]}>
             <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
@@ -457,7 +457,7 @@ export default function SocialProfileSimple({ file, user }) {
               }}
             ></script>
 
-</Flex>
+</Flex> */}
           </Flex>
 
         <Features headingSize="2xl" />
