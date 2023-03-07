@@ -117,6 +117,11 @@ const Page = ({
         <meta property="og:site_name" content={domain} />
         <meta property="article:published_time" content={date} />
         <meta property="article:author" content="Dogefiles" />
+          
+       {/* Ezoic Code Starts */}
+	      <script>var ezoicId = 442586;</script>
+	      <script type="text/javascript" src="//go.ezoic.net/ezoic/ezoic.js"></script>
+       {/* Ezoic Code Ends */}
       </Head>
       {children}
       {date && (
