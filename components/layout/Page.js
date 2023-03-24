@@ -119,8 +119,8 @@ const Page = ({
         <meta property="article:author" content="Dogefiles" />
           
        {/* Ezoic Code Starts */}
-	      <script>var ezoicId = 442586;</script>
-	      <script type="text/javascript" src="//go.ezoic.net/ezoic/ezoic.js"></script>
+	{/* <script>var ezoicId = 442586;</script>
+	      <script type="text/javascript" src="//go.ezoic.net/ezoic/ezoic.js"></script> */}
        {/* Ezoic Code Ends */}
       </Head>
       {children}
