@@ -192,6 +192,9 @@ export default function SocialProfileSimple({ file, user }) {
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
             ></script>
+	    {/* Ezoic - mid_content1 - mid_content --> */}
+<div id="ezoic-pub-ad-placeholder-104"> </div>
+{/* <!-- End Ezoic - mid_content1 - mid_content --> */}
 
 </Flex>
           </Flex>
@@ -287,7 +290,9 @@ export default function SocialProfileSimple({ file, user }) {
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
             ></script>
-
+{/* Ezoic - mid_content2 - mid_content --> */}
+<div id="ezoic-pub-ad-placeholder-105"> </div>
+{/* <!-- End Ezoic - mid_content2 - mid_content --> */}
 </Flex>
           </Flex>
         <Stack>
