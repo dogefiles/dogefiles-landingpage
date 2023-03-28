@@ -163,7 +163,7 @@ export default function SocialProfileSimple({ file, user }) {
             width={["100%"]}
           >
             <Flex width={["100%", "100%","80%", "50%"]}>
-            <script
+           {/*  <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -177,9 +177,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            />
+            /> */}
 
-            <script
+           {/*  <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -191,7 +191,7 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script>
+            ></script> */}
 	    {/* Ezoic - mid_content1 - mid_content --> */}
 <div id="ezoic-pub-ad-placeholder-104"> </div>
 {/* <!-- End Ezoic - mid_content1 - mid_content --> */}
@@ -261,7 +261,7 @@ export default function SocialProfileSimple({ file, user }) {
             width={["100%"]}
           >
             <Flex width={["100%", "100%","80%", "50%"]}>
-            <script
+            {/* <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -275,9 +275,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            />
+            /> */}
 
-            <script
+            {/* <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -289,7 +289,7 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script>
+            ></script> */}
 {/* Ezoic - mid_content2 - mid_content --> */}
 <div id="ezoic-pub-ad-placeholder-105"> </div>
 {/* <!-- End Ezoic - mid_content2 - mid_content --> */}
@@ -432,7 +432,7 @@ export default function SocialProfileSimple({ file, user }) {
             width={["100%"]}
           >
             <Flex width={["100%", "100%","80%", "50%"]}>
-            <script
+            {/* <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -446,9 +446,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            />
+            /> */}
 
-            <script
+            {/* <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -460,7 +460,7 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script>
+            ></script> */}
 
 </Flex>
           </Flex>
