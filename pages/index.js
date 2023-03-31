@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Hero from "components/layout/Hero";
+import FreeUpload from "components/layout/FreeUpload";
 import Features from "components/layout/Features";
 import Pricing from "components/layout/Pricing";
 import Testimonials from "components/layout/Testimonials";
@@ -15,6 +16,7 @@ export default function Home() {
         title={"Secure cloud storage for everyone - Dogefiles"}
       >
         <Box mb={8} w="full">
+          <FreeUpload />
           <Hero />
           <Features />
           <Testimonials />
