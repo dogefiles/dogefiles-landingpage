@@ -7,10 +7,10 @@ import titleStyle from "utils/title-style";
 const Page = ({
   children,
   date,
-  description = "Upload and Download files for free, You can keep your files as long as you want, Safest and fastest way to upload.",
+  description = "Upload and Download images and files for free, You can keep your images and files as long as you want, Safest and fastest way to upload.",
   image,
-  title = "Free Unlimited Cloud Storage For Everyone - Dogefiles",
-  keywords = "best cloud storage, free cloud storage, dogefiles, unlimited cloud storage",
+  title = "Free Unlimited Images & Cloud Storage For Everyone - Dogefiles",
+  keywords = "best cloud storage, free cloud storage, dogefiles, unlimited cloud storage, best free images upload, best image upload, free images upload",
   router,
   index = true,
 }) => {
@@ -117,11 +117,11 @@ const Page = ({
         <meta property="og:site_name" content={domain} />
         <meta property="article:published_time" content={date} />
         <meta property="article:author" content="Dogefiles" />
-          
-       {/* Ezoic Code Starts */}
-	{/* <script>var ezoicId = 442586;</script>
+
+        {/* Ezoic Code Starts */}
+        {/* <script>var ezoicId = 442586;</script>
 	      <script type="text/javascript" src="//go.ezoic.net/ezoic/ezoic.js"></script> */}
-       {/* Ezoic Code Ends */}
+        {/* Ezoic Code Ends */}
       </Head>
       {children}
       {date && (
