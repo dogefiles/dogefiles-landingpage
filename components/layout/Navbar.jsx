@@ -337,6 +337,18 @@ const NAV_ITEMS = [
     label: "Testimonials",
     href: "/#testimonials",
   },
+  {
+    label: "About Us",
+    href: "/about-us",
+  },
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
+  },
   // {
   //   label: "Blog",
   //   href: "https://www.dogefiles.co",

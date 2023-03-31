@@ -110,7 +110,7 @@ export default function LargeWithNewsletter() {
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
             <Link href={"/about-us"}>About us</Link>
-            <Link href={"/blog"}>Blog</Link>
+            {/* <Link href={"/blog"}>Blog</Link> */}
             {/* <Link href={"https://angel.co/company/dogefiles"}>Careers</Link> */}
             <Link href={"/privacy-policy"}>Privacy Policy</Link>
           </Stack>
