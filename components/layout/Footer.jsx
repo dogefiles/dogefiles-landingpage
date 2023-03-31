@@ -91,7 +91,9 @@ export default function LargeWithNewsletter() {
                 onClick={() => router.push("/")}
               />
             </Box>
-            <Text fontSize={"sm"}>© 2021 Dogefiles. All rights reserved</Text>
+            <Text fontSize={"sm"}>
+              © 2021 - 2023 Dogefiles. All rights reserved
+            </Text>
             <Stack direction={"row"} spacing={6}>
               <SocialButton
                 label={"Twitter"}
@@ -120,7 +122,7 @@ export default function LargeWithNewsletter() {
             <Link href={"/terms-of-service"}>Terms of Service</Link>
             <Link href={"/dmca"}>DMCA</Link>
           </Stack>
-          <Stack align={"flex-start"}>
+          {/* <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
             <Stack direction={"row"}>
               <Input
@@ -141,7 +143,7 @@ export default function LargeWithNewsletter() {
                 icon={<BiMailSend />}
               />
             </Stack>
-          </Stack>
+          </Stack> */}
         </SimpleGrid>
       </Container>
     </Box>
