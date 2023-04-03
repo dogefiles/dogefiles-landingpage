@@ -156,14 +156,14 @@ export default function SocialProfileSimple({ file, user }) {
           </Stack>
         </Flex>
         <Flex
-            flexDir={"column"}
-            justifyContent="center"
-            alignItems={"center"}
-            my="8"         
-            width={["100%"]}
-          >
-            <Flex width={["100%", "100%","80%", "50%"]}>
-           {/*  <script
+          flexDir={"column"}
+          justifyContent="center"
+          alignItems={"center"}
+          my="8"
+          width={["100%"]}
+        >
+          <Flex width={["100%", "100%", "80%", "50%"]}>
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -177,9 +177,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            /> */}
+            />
 
-           {/*  <script
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -191,13 +191,12 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script> */}
-	    {/* Ezoic - mid_content1 - mid_content --> */}
-<div id="ezoic-pub-ad-placeholder-104"> </div>
-{/* <!-- End Ezoic - mid_content1 - mid_content --> */}
-
-</Flex>
+            ></script>
+            {/* Ezoic - mid_content1 - mid_content --> */}
+            <div id="ezoic-pub-ad-placeholder-104"> </div>
+            {/* <!-- End Ezoic - mid_content1 - mid_content --> */}
           </Flex>
+        </Flex>
         <Stack>
           <Circle
             position="absolute"
@@ -254,14 +253,14 @@ export default function SocialProfileSimple({ file, user }) {
           </Flex>
         </Stack>
         <Flex
-            flexDir={"column"}
-            justifyContent="center"
-            alignItems={"center"}
-            my="8"         
-            width={["100%"]}
-          >
-            <Flex width={["100%", "100%","80%", "50%"]}>
-            {/* <script
+          flexDir={"column"}
+          justifyContent="center"
+          alignItems={"center"}
+          my="8"
+          width={["100%"]}
+        >
+          <Flex width={["100%", "100%", "80%", "50%"]}>
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -275,9 +274,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            /> */}
+            />
 
-            {/* <script
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -289,12 +288,12 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script> */}
-{/* Ezoic - mid_content2 - mid_content --> */}
-<div id="ezoic-pub-ad-placeholder-105"> </div>
-{/* <!-- End Ezoic - mid_content2 - mid_content --> */}
-</Flex>
+            ></script>
+            {/* Ezoic - mid_content2 - mid_content --> */}
+            <div id="ezoic-pub-ad-placeholder-105"> </div>
+            {/* <!-- End Ezoic - mid_content2 - mid_content --> */}
           </Flex>
+        </Flex>
         <Stack>
           <Flex
             justifyContent="space-between"
@@ -423,16 +422,16 @@ export default function SocialProfileSimple({ file, user }) {
             </Box>
           </Flex>
         </Stack>
-        
+
         <Flex
-            flexDir={"column"}
-            justifyContent="center"
-            alignItems={"center"}
-            my="8"         
-            width={["100%"]}
-          >
-            <Flex width={["100%", "100%","80%", "50%"]}>
-            {/* <script
+          flexDir={"column"}
+          justifyContent="center"
+          alignItems={"center"}
+          my="8"
+          width={["100%"]}
+        >
+          <Flex width={["100%", "100%", "80%", "50%"]}>
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `
@@ -446,9 +445,9 @@ export default function SocialProfileSimple({ file, user }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
               }}
-            /> */}
+            />
 
-            {/* <script
+            <script
               type="text/javascript"
               dangerouslySetInnerHTML={{
                 __html: `atOptions = {
@@ -460,10 +459,9 @@ export default function SocialProfileSimple({ file, user }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
               }}
-            ></script> */}
-
-</Flex>
+            ></script>
           </Flex>
+        </Flex>
 
         <Features headingSize="2xl" />
 

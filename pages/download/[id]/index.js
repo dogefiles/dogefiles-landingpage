@@ -51,7 +51,7 @@ export default function download({ errorCode, data }) {
             width={["100%"]}
           >
             <Flex width={["100%", "100%", "80%", "50%"]}>
-              {/* <script
+              <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -65,9 +65,9 @@ export default function download({ errorCode, data }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
                 }}
-              /> */}
+              />
 
-              {/* <script
+              <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
                   __html: `atOptions = {
@@ -79,7 +79,7 @@ export default function download({ errorCode, data }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
                 }}
-              ></script> */}
+              ></script>
             </Flex>
           </Flex>
           {file && file.fileName ? (
