@@ -5,7 +5,7 @@ import Footer from "./Footer";
 const Layout = ({ children }) => {
   return (
     <Box margin="0 auto" maxWidth="1400" transition="0.5s ease-out">
-      <Box marginX={[2, 4, 6, 48]}>
+      <Box marginX={[2, 4, 6, 72]}>
         <Navbar />
         {/* <Flex>
           <Flex
