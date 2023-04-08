@@ -25,11 +25,11 @@ export default function download({ errorCode, data }) {
         <Head>
           {/* Admaven Starts and all ads related to Admaven is in this page only from Admaven Starts to Admaven Ends */}
           {/* New pop */}
-          <script
+          {/* <script
             data-cfasync="false"
             src="//dba9ytko5p72r.cloudfront.net/?tyabd=948540"
-          ></script>
-          <script data-cfasync="false" src="/pop.js"></script>
+          ></script> */}
+          {/* <script data-cfasync="false" src="/pop.js"></script> */}
 
           {/* old pop */}
           {/* <script
