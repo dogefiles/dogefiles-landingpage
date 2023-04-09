@@ -22,6 +22,10 @@ export default function Home() {
           <Testimonials />
           {/* <Pricing />  We don't need it yet */}
           {/* <Pricing /> */}
+
+          {/* Ezoic - faq - mid_content */}
+          <div id="ezoic-pub-ad-placeholder-103"> </div>
+          {/* End Ezoic - faq - mid_content */}
           <Faq />
         </Box>
       </Page>
