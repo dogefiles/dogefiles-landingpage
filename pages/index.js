@@ -16,7 +16,7 @@ export default function Home() {
         title={"Secure cloud storage for everyone - Dogefiles"}
       >
         <Box mb={8} w="full">
-          <FreeUpload />
+          {/* <FreeUpload /> */}
           <Hero />
           <Features />
           <Testimonials />

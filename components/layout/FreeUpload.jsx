@@ -161,7 +161,7 @@ export default function App() {
     const xhr = new XMLHttpRequest();
     xhr.open(
       "POST",
-      "https://api.imgbb.com/1/upload?expiration=600&key=744e23555063033f752b1be7c30beac0"
+      "https://api.imgbb.com/1/upload?expiration=600&key=YOUR_KEY"
     );
 
     // track upload progress
