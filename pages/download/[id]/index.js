@@ -25,15 +25,15 @@ export default function download({ errorCode, data }) {
         <Head>
           {/* Admaven Starts and all ads related to Admaven is in this page only from Admaven Starts to Admaven Ends */}
           {/* New pop */}
-          <script
+          {/* <script
             data-cfasync="false"
             src="//dba9ytko5p72r.cloudfront.net/?tyabd=948540"
-          ></script>
-          <script
+          ></script> */}
+          {/* <script
             data-cfasync="false"
             src="//dfwbfr2blhmr5.cloudfront.net/?fbwfd=983705"
-          ></script>
-          <script data-cfasync="false" src="/pop.js"></script>
+          ></script> */}
+          {/*   <script data-cfasync="false" src="/pop.js"></script> */}
 
           {/* old pop */}
           {/* <script
@@ -57,7 +57,7 @@ export default function download({ errorCode, data }) {
             width={["100%"]}
           >
             <Flex width={["100%", "100%", "80%", "50%"]}>
-              <script
+              {/*  <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -71,9 +71,9 @@ export default function download({ errorCode, data }) {
           document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');
           `,
                 }}
-              />
+              />  */}
 
-              <script
+              {/*  <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{
                   __html: `atOptions = {
@@ -85,7 +85,7 @@ export default function download({ errorCode, data }) {
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.topdisplayformat.com/e4176cde5c7a653fe9b1c6dea79cdc6d/invoke.js"></scr' + 'ipt>');`,
                 }}
-              ></script>
+              ></script>  */}
             </Flex>
           </Flex>
           {file && file.fileName ? (
